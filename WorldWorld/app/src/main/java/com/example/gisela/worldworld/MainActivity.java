@@ -3,6 +3,8 @@ package com.example.gisela.worldworld;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,14 +20,12 @@ import android.widget.ImageView;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Intent houseInteriorActivity;
-    MediaPlayer stairs;
-    MediaPlayer door;
-    MediaPlayer clown_balloons;
+    MediaPlayer play;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,26 +34,67 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void playStairs(View view)
+    public void playSound(View view)
     {
-        stairs = MediaPlayer.create(this, R.raw.stairs);
-        stairs.start();
+        String tag = view.getTag().toString();
+        AssetFileDescriptor openassets;
+
+        try
+        {
+            //open audio file from Assets folder
+            openassets = getAssets().openFd(tag);
+
+            play = new MediaPlayer();
+            play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+            play.prepare();
+            play.start();
+
+
+        } // end try
+        catch (IOException e)
+        {
+            System.out.print(e.toString());
+        } // end catch
+
+
     }
 
-    public void playDoor(View view)
+    public void openStore(View view)
     {
-        door = MediaPlayer.create(this, R.raw.door);
-        door.start();
-        houseInteriorActivity = new Intent(this, AnimalsDogs.class);
-        startActivity(houseInteriorActivity);
-
+        //get tag from xml layout
+        String tag = view.getTag().toString();
+        Intent itemsActivity = new Intent(this, DisplayItems.class);
+        Bundle b = new Bundle();
+        b.putString("cat",tag);
+        itemsActivity.putExtras(b);
+        startActivity(itemsActivity);
+        //finish();
     }
 
-    public void playClownBalloons(View view)
+    public void openInterior(View view)
     {
-        clown_balloons = MediaPlayer.create(this, R.raw.clown_balloons);
-        clown_balloons.start();
+        String tag = view.getTag().toString();
+        Intent interiorActivity = new Intent(this, Interior.class);
+        Bundle b = new Bundle();
+        b.putString("cat",tag);
+        interiorActivity.putExtras(b);
+        startActivity(interiorActivity);
+        //finish();
     }
+
+    public void openHouse (View view)
+    {
+        playSound(view);
+        Intent houseInterior = new Intent(this, Interior.class);
+        startActivity(houseInterior);
+    }
+
+    public void openQuiz (View view)
+    {
+        Intent quizActivity = new Intent(this, Quiz.class);
+        startActivity(quizActivity);
+    }
+
 
 
 }

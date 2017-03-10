@@ -5,27 +5,13 @@ android {
     buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId "com.example.gisela.worldworld"
-        minSdkVersion 11
+        minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    /*sourceSets {
-        main {
-            manifest.srcFile 'src/main/AndroidManifest.xml'
-            java.srcDirs = ['src/main/java','.apt_generated']
-            aidl.srcDirs = ['src/main/aidl','.apt_generated']
-            assets.srcDirs = ['src/main/assets']
-            res.srcDirs =
-                    [
-                            'src/main/res/drawable/animals/dogs',
-                            'src/main/res/drawable/animals',
-                            'src/main/res/drawable',
-                            'src/main/res'
-                    ]
-        }
-    }*/
+
     buildTypes {
         release {
             minifyEnabled false

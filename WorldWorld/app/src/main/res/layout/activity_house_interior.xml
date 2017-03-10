@@ -10,9 +10,71 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="horizontal"
-    android:background="@drawable/townhouseinside"
-    tools:context="com.example.gisela.worldworld.HouseInterior">
+    android:background="@drawable/interior_house"
+    tools:context="com.example.gisela.worldworld.Interior">
     <!--android:background="@drawable/townhouseinside"-->
+
+    <Button
+        android:background="@null"
+        android:tag="@string/clothes"
+        android:id="@+id/house_cat1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="170dp"
+        android:layout_width="190dp" />
+
+    <Button
+        android:background="@null"
+        android:tag=" "
+        android:id="@+id/house_cat4"
+        android:layout_height="170dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="190dp" />
+
+    <Button
+        android:onClick="openCategory"
+        android:background="@null"
+        android:tag="@string/sewing"
+        android:id="@+id/house_cat2"
+        android:layout_height="170dp"
+        android:layout_width="190dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/house_cat1"
+        android:layout_toEndOf="@+id/house_cat1" />
+
+    <Button
+        android:background="@null"
+        android:tag=" "
+        android:id="@+id/house_cat3"
+        android:layout_height="170dp"
+        android:layout_width="190dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/house_cat2"
+        android:layout_toEndOf="@+id/house_cat2" />
+
+    <Button
+        android:background="@null"
+        android:tag="@string/accessories"
+        android:id="@+id/house_cat5"
+        android:layout_height="170dp"
+        android:layout_width="190dp"
+        android:layout_below="@+id/house_cat1"
+        android:layout_toRightOf="@+id/house_cat1"
+        android:layout_toEndOf="@+id/house_cat1" />
+
+    <Button
+        android:background="@null"
+        android:tag="@string/accessories"
+        android:id="@+id/house_cat6"
+        android:layout_width="190dp"
+        android:layout_height="170dp"
+        android:layout_below="@+id/house_cat3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
 
 
 </RelativeLayout>

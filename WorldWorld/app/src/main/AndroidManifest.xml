@@ -17,9 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HouseInterior" android:screenOrientation="landscape"/>
-        <activity android:name=".StreetBuildings" android:screenOrientation="landscape"/>
-        <activity android:name=".AnimalsDogs" android:screenOrientation="landscape"/>
+        <activity android:name=".Interior" android:screenOrientation="landscape"/>
+        <activity android:name=".DisplayItems" android:screenOrientation="landscape"/>
+        <activity android:name=".Quiz" android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

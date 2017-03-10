@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_width="260dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@drawable/vehicles_passenger_sedancar"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:id="@+id/iquiz1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="91dp"
+            android:layout_marginStart="91dp" />
+
+        <ImageView
+            android:src="@drawable/vehicles_passenger_sedancar"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:id="@+id/iquiz4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/iquiz1"
+            android:layout_alignStart="@+id/iquiz1" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:src="@drawable/vehicles_passenger_sedancar"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:id="@+id/iquiz2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="91dp"
+            android:layout_marginStart="91dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:src="@drawable/vehicles_passenger_sedancar"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:id="@+id/iquiz3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_below="@+id/iquiz2"
+            android:layout_alignLeft="@+id/iquiz2"
+            android:layout_alignStart="@+id/iquiz2"
+            android:layout_marginTop="16dp" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

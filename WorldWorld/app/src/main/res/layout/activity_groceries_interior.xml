@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_house_interior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="horizontal"
+    android:background="@drawable/interior_groceries"
+    tools:context="com.example.gisela.worldworld.Interior">
+    <!--android:background="@drawable/townhouseinside"-->
+
+    <Button
+        android:onClick="openCategory"
+        android:background="@null"
+        android:tag="@string/fruits_nuts"
+        android:id="@+id/groceries_cat1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="170dp"
+        android:layout_width="190dp" />
+
+    <Button
+        android:onClick="openCategory"
+        android:background="@null"
+        android:tag="@string/fruits_nuts"
+        android:id="@+id/groceries_cat4"
+        android:layout_height="170dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="190dp" />
+
+    <Button
+        android:onClick="openCategory"
+        android:background="@null"
+        android:tag="@string/fruits_nuts"
+        android:id="@+id/groceries_cat2"
+        android:layout_height="170dp"
+        android:layout_width="190dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/groceries_cat1"
+        android:layout_toEndOf="@+id/groceries_cat1" />
+
+    <Button
+        android:onClick="openCategory"
+        android:background="@null"
+        android:tag="@string/vegetables"
+        android:id="@+id/groceries_cat3"
+        android:layout_height="170dp"
+        android:layout_width="190dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/groceries_cat2"
+        android:layout_toEndOf="@+id/groceries_cat2" />
+
+    <Button
+        android:onClick="openCategory"
+        android:background="@null"
+        android:tag="@string/vegetables"
+        android:id="@+id/groceries_cat5"
+        android:layout_height="170dp"
+        android:layout_width="190dp"
+        android:layout_below="@+id/groceries_cat1"
+        android:layout_toRightOf="@+id/groceries_cat1"
+        android:layout_toEndOf="@+id/groceries_cat1" />
+
+    <Button
+        android:onClick="openCategory"
+        android:background="@null"
+        android:tag="@string/vegetables"
+        android:id="@+id/groceries_cat6"
+        android:layout_width="190dp"
+        android:layout_height="170dp"
+        android:layout_below="@+id/groceries_cat3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>
