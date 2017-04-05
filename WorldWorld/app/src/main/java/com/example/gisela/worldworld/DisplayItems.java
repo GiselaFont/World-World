@@ -1,6 +1,7 @@
 package com.example.gisela.worldworld;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
@@ -53,7 +54,7 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
         adapter.setClickListener(this);
         mrecyclerView.setAdapter(adapter);
 
-        mLinearLayoutManager = new LinearLayoutManager(this);
+        mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mrecyclerView.setLayoutManager(mLinearLayoutManager);
 
 
@@ -67,22 +68,30 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
         Drawable image;
 
         AssetManager assets = getAssets(); // get app's AssetManager
-        InputStream stream; // used to read in flag images
+        InputStream stream; // used to read images
         fileNameList = new ArrayList<String>();
 
         try
         {
-            //get all the path of the files inside Animals folder
+            //get all the paths of the files inside the category folder
             String[] path = assets.list(cat);
             String tmp;
 
             for(int i = 0; i < path.length; i++)
             {
                 tmp = path[i];
-                path[i] = path[i].replace(".png", " ");
+                path[i] = path[i].replace(".png", "");
+
+                //check if the path contains a number,
+                //then it is part of the interiors
+                if(path[i].matches(".*\\d+.*"))
+                {
+                    path[i] = path[i].substring(path[i].indexOf("-")+1);
+                }
 
                 //add name of the image to the list
                 fileNameList.add(path[i]);
+
                 // load the asset as a Drawable and display on the Image and TextView
                 stream = assets.open(cat + "/" + tmp);
                 image = Drawable.createFromStream(stream, null);
@@ -112,16 +121,34 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
 
         try
         {
-            //get all the path of the files inside Animals folder
-            String[] path = assets.list(cat + "/sounds");
-            // get an InputStream to the asset representing the next item
-            //provide access to the file
-            openassets = getAssets().openFd(cat + "/sounds/" + path[position]);
+            if(!cat.equals("Interiors"))
+            {
+                //get all the path of the files inside Animals folder
+                String[] path = assets.list(cat + "/sounds");
+                // get an InputStream to the asset representing the next item
+                //provide access to the file
+                openassets = getAssets().openFd(cat + "/sounds/" + path[position]);
 
-            play = new MediaPlayer();
-            play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
-            play.prepare();
-            play.start();
+                play = new MediaPlayer();
+                play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+                play.prepare();
+                play.start();
+            }
+            else{
+                //get all the path of the files inside Animals folder
+                String[] path = assets.list(cat);
+                path[position] = path[position].replace(".png", "");
+                path[position] = path[position].substring(path[position].indexOf("-")+1);
+
+                //name of the file to open the right interior
+                String tag = path[position];
+                Intent interiorActivity = new Intent(this, Interior.class);
+                Bundle b = new Bundle();
+                b.putString("cat",tag);
+                interiorActivity.putExtras(b);
+                startActivity(interiorActivity);
+            }
+
 
 
         } // end try
@@ -129,7 +156,6 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
         {
             System.out.print(e.toString());
         } // end catch
-
 
     }
 }

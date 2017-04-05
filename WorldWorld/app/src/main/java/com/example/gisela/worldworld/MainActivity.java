@@ -14,6 +14,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -26,13 +28,16 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     MediaPlayer play;
+    private Button endButton;
+    private HorizontalScrollView hsv;
+    private boolean end = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
+    }
 
     public void playSound(View view)
     {
@@ -92,9 +97,29 @@ public class MainActivity extends AppCompatActivity {
     public void openQuiz (View view)
     {
         Intent quizActivity = new Intent(this, Quiz.class);
+        Bundle b = new Bundle();
+        b.putString("cat", "Animals/dogs");
+        quizActivity.putExtras(b);
         startActivity(quizActivity);
     }
 
+    //Scroll to the end or the beginning
+    public void scrollEnd (View View)
+    {
 
+        if(!end)
+        {
+            hsv = (HorizontalScrollView) findViewById(R.id.horizontal_scroll);
+            hsv.scrollTo((int)hsv.getScrollX() + 40000, (int)hsv.getScrollY());
+            end = true;
+        }
+        else
+        {
+            hsv = (HorizontalScrollView) findViewById(R.id.horizontal_scroll);
+            hsv.scrollTo((int)hsv.getScrollX() - 40000, (int)hsv.getScrollY());
+            end = false;
+        }
+
+    }
 
 }

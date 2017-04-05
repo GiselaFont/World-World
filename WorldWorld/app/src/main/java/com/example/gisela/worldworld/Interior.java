@@ -24,6 +24,10 @@ public class Interior extends AppCompatActivity {
         {
             setContentView(R.layout.activity_toys_interior);
         }
+        else if(cat.equals("dogs"))
+        {
+            setContentView(R.layout.activity_bakery_interior);
+        }
         else if(cat.equals("bakery"))
         {
             setContentView(R.layout.activity_bakery_interior);
@@ -83,7 +87,6 @@ public class Interior extends AppCompatActivity {
         b.putString("cat",tag);
         itemsActivity.putExtras(b);
         startActivity(itemsActivity);
-        //finish();
     }
 
 }

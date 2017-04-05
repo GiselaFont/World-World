@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">World World</string>
+    <!--Interiors array-->
+    <string name="interiors">Interiors</string>
     <!--Animals array-->
     <string name="pets">Animals/pets</string>
     <string name="farm">Animals/farm</string>

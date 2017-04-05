@@ -9,11 +9,17 @@
         android:layout_width="260dp"
         android:layout_height="match_parent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score"
+            android:id="@+id/score_text"/>
+
         <ImageView
-            android:src="@drawable/vehicles_passenger_sedancar"
+            android:onClick="checkAnswer"
             android:scaleType="fitXY"
             android:background="@null"
-            android:id="@+id/iquiz1"
+            android:id="@+id/choice1"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_alignParentTop="true"
@@ -23,16 +29,26 @@
             android:layout_marginStart="91dp" />
 
         <ImageView
-            android:src="@drawable/vehicles_passenger_sedancar"
+            android:onClick="checkAnswer"
             android:scaleType="fitXY"
             android:background="@null"
-            android:id="@+id/iquiz4"
+            android:id="@+id/choice4"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_weight="1"
             android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/iquiz1"
-            android:layout_alignStart="@+id/iquiz1" />
+            android:layout_alignLeft="@+id/choice1"
+            android:layout_alignStart="@+id/choice1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="15dp"
+            android:id="@+id/score"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/score_text"
+            android:layout_toEndOf="@+id/score_text" />
 
     </RelativeLayout>
 
@@ -42,10 +58,10 @@
 
 
         <ImageView
-            android:src="@drawable/vehicles_passenger_sedancar"
+            android:onClick="checkAnswer"
             android:scaleType="fitXY"
             android:background="@null"
-            android:id="@+id/iquiz2"
+            android:id="@+id/choice2"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_alignParentTop="true"
@@ -56,16 +72,16 @@
             android:layout_weight="1" />
 
         <ImageView
-            android:src="@drawable/vehicles_passenger_sedancar"
+            android:onClick="checkAnswer"
             android:scaleType="fitXY"
             android:background="@null"
-            android:id="@+id/iquiz3"
+            android:id="@+id/choice3"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            android:layout_below="@+id/iquiz2"
-            android:layout_alignLeft="@+id/iquiz2"
-            android:layout_alignStart="@+id/iquiz2"
+            android:layout_below="@+id/choice2"
+            android:layout_alignLeft="@+id/choice2"
+            android:layout_alignStart="@+id/choice2"
             android:layout_marginTop="16dp" />
 
 
