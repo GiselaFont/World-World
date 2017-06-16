@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gisela.worldworld">
+    package="com.example.gisela.worldworld"
+    android:installLocation="auto">
 
     <application
         android:allowBackup="true"
@@ -10,7 +11,7 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:screenOrientation="landscape">
+        <activity android:name=".Logo" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +21,9 @@
         <activity android:name=".Interior" android:screenOrientation="landscape"/>
         <activity android:name=".DisplayItems" android:screenOrientation="landscape"/>
         <activity android:name=".Quiz" android:screenOrientation="landscape"/>
+        <activity android:name=".QuizCelebrate" android:screenOrientation="landscape" />
+        <activity android:name=".MainActivity" android:screenOrientation="landscape" />
+        <activity android:name=".QuizCongrats" android:screenOrientation="landscape" />
     </application>
 
 </manifest>

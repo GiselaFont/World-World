@@ -81,12 +81,18 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
             {
                 tmp = path[i];
                 path[i] = path[i].replace(".png", "");
+                path[i] = path[i].replace(".jpg", "");
+                path[i] = path[i].replace("_", " ");
+                path[i] = path[i].replace("+", " ");
+                path[i] = path[i].replace("=", " ");
 
-                //check if the path contains a number,
-                //then it is part of the interiors
-                if(path[i].matches(".*\\d+.*"))
+                if(!cat.equals("Interiors"))
                 {
-                    path[i] = path[i].substring(path[i].indexOf("-")+1);
+                    if(cat.startsWith("0"))
+                    {
+                        path[i] = path[i].replace("0", "");
+                    }
+                    path[i] = path[i].replaceAll("\\d","");
                 }
 
                 //add name of the image to the list
@@ -137,7 +143,7 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
             else{
                 //get all the path of the files inside Animals folder
                 String[] path = assets.list(cat);
-                path[position] = path[position].replace(".png", "");
+
                 path[position] = path[position].substring(path[position].indexOf("-")+1);
 
                 //name of the file to open the right interior
@@ -158,4 +164,20 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
         } // end catch
 
     }
+
+    public void openQuiz (View view)
+    {
+        Intent quizActivity = new Intent(DisplayItems.this, Quiz.class);
+        Bundle b = new Bundle();
+        b.putString("cat", cat);
+        quizActivity.putExtras(b);
+        startActivity(quizActivity);
+
+    }
+
+    public void goHome (View view)
+    {
+        finish();
+    }
+
 }

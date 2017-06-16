@@ -5,17 +5,20 @@
     android:layout_height="wrap_content"
     android:weightSum="1">
 
-    <RelativeLayout android:layout_height="363dp"
-        android:layout_width="281dp">
+    <RelativeLayout android:layout_height="match_parent"
+        android:layout_width="220dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_weight="1">
 
         <TextView
             android:id="@+id/textView"
             android:textColor="#333"
-            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_height="30dp"
+            android:layout_below="@+id/dogs"
             android:layout_centerHorizontal="true"
-            android:layout_height="100dp" />
+            android:layout_marginTop="37dp" />
 
         <ImageView
             android:scaleType="fitXY"
@@ -23,10 +26,11 @@
             android:id="@+id/dogs"
             android:layout_height="200dp"
             android:layout_width="200dp"
-            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="54dp" />
+            android:layout_marginTop="124dp" />
 
     </RelativeLayout>
+
 
 </LinearLayout>

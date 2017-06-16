@@ -3,12 +3,16 @@
     <!--Arrays by categories-->
     <string-array name="Animals">
         <item>@string/pets</item>
-        <item>@string/farm</item>
+        <item>@string/animals</item>
+        <item>@string/babies</item>
+        <item>@string/farm_body</item>
+        <item>@string/families</item>
         <item>@string/dogs</item>
         <item>@string/plant</item>
         <item>@string/meat</item>
         <item>@string/omnivores</item>
         <item>@string/pretend</item>
+        <item>@string/wild</item>
     </string-array>
 
     <string-array name="Clothing">
@@ -18,34 +22,44 @@
         <item>@string/sewing</item>
         <item>@string/shoes</item>
         <item>@string/omnivores</item>
+        <item>@string/fashion</item>
     </string-array>
 
     <string-array name="Grocery">
         <item>@string/bread</item>
         <item>@string/sweets</item>
-        <item>@string/fruits_nuts</item>
+        <item>@string/fruits</item>
+        <item>@string/nuts</item>
+        <item>@string/grains</item>
+        <item>@string/berries</item>
+        <item>@string/tubers</item>
         <item>@string/vegetables</item>
+    </string-array>
+
+    <string-array name="Health">
+        <item>@string/health_equipment</item>
+        <item>@string/nurse</item>
+        <item>@string/pediatrician</item>
+        <item>@string/psychologist</item>
     </string-array>
 
     <string-array name="House">
         <item>@string/bathroom</item>
-        <item>@string/desk_tables</item>
-        <item>@string/furniture</item>
-        <item>@string/sitting</item>
         <item>@string/bedroom</item>
-        <item>@string/house</item>
-        <item>@string/household</item>
-        <item>@string/appliances</item>
-        <item>@string/food_drinks</item>
-        <item>@string/utensils</item>
+        <item>@string/housewares</item>
+        <item>@string/kitchen</item>
+        <item>@string/livingroom</item>
     </string-array>
 
     <string-array name="Mall">
+        <item>@string/restaurant</item>
         <item>@string/toy</item>
         <item>@string/vehicle</item>
         <item>@string/riding</item>
-        <item>@string/hit</item>
-        <item>@string/blow</item>
+        <item>@string/percussion</item>
+        <item>@string/brass</item>
+        <item>@string/woodwind</item>
+        <item>@string/strings</item>
         <item>@string/strings</item>
         <item>@string/individual</item>
         <item>@string/team</item>
@@ -59,7 +73,6 @@
 
     <string-array name="Outdoors">
         <item>@string/weather</item>
-        <item>@string/sky</item>
         <item>@string/outdoors_gear</item>
         <item>@string/ocean</item>
         <item>@string/beach</item>
@@ -80,6 +93,7 @@
         <item>@string/body</item>
         <item>@string/feelings</item>
         <item>@string/family</item>
+        <item>@string/military</item>
         <item>@string/perform</item>
         <item>@string/badguys</item>
         <item>@string/helpers</item>
@@ -91,17 +105,18 @@
         <item>@string/easy</item>
         <item>@string/fun</item>
         <item>@string/work</item>
+        <item>@string/people_boys</item>
+        <item>@string/people_girls</item>
+        <item>@string/women</item>
+        <item>@string/men</item>
     </string-array>
 
     <string-array name="School">
         <item>@string/colors</item>
-        <item>@string/counting</item>
         <item>@string/addition</item>
-        <item>@string/few_many</item>
-        <item>@string/alphabet</item>
-        <item>@string/phonics_sounds</item>
-        <item>@string/symbols</item>
-        <item>@string/geometric</item>
+        <item>@string/numbers</item>
+        <item>@string/letters</item>
+        <item>@string/shapes</item>
     </string-array>
 
     <string-array name="Vehicles">
