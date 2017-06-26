@@ -124,7 +124,7 @@
         android:id="@+id/girl_standing_on_shoulder"
         android:background="@null"
         android:onClick="playSound"
-        android:tag="xtra/04_trying_to_find_somebody"
+        android:tag="People/people/girls/sounds/03daughter.mp3"
         android:layout_height="100dp"
         android:layout_width="40dp"
                     android:layout_alignParentTop="true"
@@ -172,7 +172,7 @@
                     android:id="@+id/woman_arms_crossed"
                     android:background="@null"
                     android:onClick="playSound"
-                    android:tag="xtra/she_remembers_toasting_marshmallows.mp3"
+                    android:tag="xtra/26_i_dont_have_anything_to_do.mp3"
                     android:layout_width="35dp"
                     android:layout_height="200dp"
                     android:layout_marginLeft="12dp"
@@ -242,6 +242,38 @@
                     android:layout_toRightOf="@+id/man_arms_crossed"
                     android:layout_toEndOf="@+id/man_arms_crossed" />
 
+                <Button
+                    android:id="@+id/plumber1"
+                    android:background="@null"
+                    android:onClick="playSound"
+                    android:tag="Construction/sounds/08plumber.mp3"
+                    android:layout_height="200dp"
+                    android:layout_width="30dp"
+                    android:layout_below="@+id/draws_wonderful_pictures"
+                    android:layout_alignLeft="@+id/draws_wonderful_pictures"
+                    android:layout_alignStart="@+id/draws_wonderful_pictures" />
+
+                <Button
+                    android:id="@+id/father"
+                    android:background="@null"
+                    android:onClick="playSound"
+                    android:tag="People/people/men/sounds/18father.mp3"
+                    android:layout_height="200dp"
+                    android:layout_width="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/plumber1"
+                    android:layout_toEndOf="@+id/plumber1" />
+
+                <Button
+                    android:id="@+id/goldfish1"
+                    android:background="@null"
+                    android:onClick="playSound"
+                    android:tag="xtra/05_fishbowl.mp3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/girl_wearing_scarf"
+                    android:layout_toRightOf="@+id/navy_officer"
+                    android:layout_toEndOf="@+id/navy_officer" />
 
             </RelativeLayout>
 

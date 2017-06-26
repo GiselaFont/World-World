@@ -5,6 +5,7 @@ import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import java.io.IOException;
@@ -204,11 +205,15 @@ public class Interior extends AppCompatActivity {
             setContentView(R.layout.activity_house_interior);
         }
 
+        play = new MediaPlayer();
+
     }
 
     public void openCategory(View view)
     {
         String tag = view.getTag().toString();
+        String cat = Parse(tag); //get cat
+        playCategorySound(cat);
         Intent itemsActivity = new Intent(this, DisplayItems.class);
         Bundle b = new Bundle();
         b.putString("cat",tag);
@@ -221,22 +226,27 @@ public class Interior extends AppCompatActivity {
         String tag = view.getTag().toString();
         AssetFileDescriptor openassets;
 
-        try
+        if(!play.isPlaying())
         {
-            //open audio file from Assets folder
-            openassets = getAssets().openFd(tag);
+            try
+            {
+                play.reset();
+                //open audio file from Assets folder
+                openassets = getAssets().openFd(tag);
 
-            play = new MediaPlayer();
-            play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
-            play.prepare();
-            play.start();
+                play = new MediaPlayer();
+                play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+                play.prepare();
+                play.start();
 
 
-        } // end try
-        catch (IOException e)
-        {
-            System.out.print(e.toString());
-        } // end catch
+            } // end try
+            catch (IOException e)
+            {
+                System.out.print(e.toString());
+            } // end catch
+        }
+
 
 
     }
@@ -244,6 +254,7 @@ public class Interior extends AppCompatActivity {
     public void openInterior(View view)
     {
         String tag = view.getTag().toString();
+        playCategorySound(cat);
         Intent interiorActivity = new Intent(this, Interior.class);
         Bundle b = new Bundle();
         b.putString("cat",tag);
@@ -273,5 +284,41 @@ public class Interior extends AppCompatActivity {
         startActivity(quizActivity);
 
     }
+
+    public String Parse(String tag)
+    {
+        String[] path = tag.split("/");
+        return path[path.length-1];
+    }
+
+    public void playCategorySound(String cat)
+    {
+        AssetFileDescriptor openassets;
+
+        if(!play.isPlaying())
+        {
+            try
+            {
+                play.reset();
+                //open audio file from Assets folder
+                openassets = getAssets().openFd("xtra/HEADINGS/00" + cat + ".mp3");
+
+                play = new MediaPlayer();
+                play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+                play.prepare();
+                play.start();
+
+
+            } // end try
+            catch (IOException e)
+            {
+                System.out.print(e.toString());
+            } // end catch
+        }
+
+
+
+    }
+
 
 }

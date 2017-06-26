@@ -140,7 +140,7 @@
         android:id="@+id/wrens"
         android:background="@null"
         android:onClick="playSound"
-        android:tag="Vehicles/street/sidewalk_people/sounds/walking_woman.mp3"
+        android:tag="xtra/wren.mp3"
         android:layout_height="60dp"
         android:layout_width="75dp"
                 android:layout_below="@+id/robin"
@@ -171,6 +171,16 @@
                 android:layout_alignRight="@+id/swan"
                 android:layout_alignEnd="@+id/swan" />
 
+            <Button
+                android:id="@+id/seagulls1"
+                android:background="@null"
+                android:onClick="playSound"
+                android:tag="Outdoors/beach/creatures/sounds/05seagulls.mp3"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_alignTop="@+id/bluejayd"
+                android:layout_alignRight="@+id/swan"
+                android:layout_alignEnd="@+id/swan" />
 
         </RelativeLayout>
     </LinearLayout>

@@ -39,8 +39,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    MediaPlayer play;
-    private Button endButton;
+    private MediaPlayer play;
     private HorizontalScrollView hsv;
 
     //Zoom
@@ -58,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         hsv = (HorizontalScrollView) findViewById(R.id.horizontal_scroll);
 
+        play = new MediaPlayer();
         //Zoom
         gestureDetector = new GestureDetector(this, new GestureListener());
         relativeLayout = (RelativeLayout) findViewById(R.id.activity_main);
@@ -132,22 +132,28 @@ public class MainActivity extends AppCompatActivity {
         String tag = view.getTag().toString();
         AssetFileDescriptor openassets;
 
-        try
+        if(!play.isPlaying())
         {
-            //open audio file from Assets folder
-            openassets = getAssets().openFd(tag);
+            try
+            {
+                play.reset();
+                play = new MediaPlayer();
+                //open audio file from Assets folder
+                openassets = getAssets().openFd(tag);
 
-            play = new MediaPlayer();
-            play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
-            play.prepare();
-            play.start();
+                //play = new MediaPlayer();
+                play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+                play.prepare();
+                play.start();
 
 
-        } // end try
-        catch (IOException e)
-        {
-            System.out.print(e.toString());
-        } // end catch
+            } // end try
+            catch (IOException e)
+            {
+                System.out.print(e.toString());
+            } // end catch
+
+        }
 
 
     }
@@ -156,6 +162,8 @@ public class MainActivity extends AppCompatActivity {
     {
         //get tag from xml layout
         String tag = view.getTag().toString();
+        String cat = Parse(tag); //get cat
+        playCategorySound(cat);
         Intent itemsActivity = new Intent(this, DisplayItems.class);
         Bundle b = new Bundle();
         b.putString("cat",tag);
@@ -166,12 +174,49 @@ public class MainActivity extends AppCompatActivity {
     public void openInterior(View view)
     {
         String tag = view.getTag().toString();
+        playCategorySound(tag);
         Intent interiorActivity = new Intent(this, Interior.class);
         Bundle b = new Bundle();
         b.putString("cat",tag);
         interiorActivity.putExtras(b);
         startActivity(interiorActivity);
         //finish();
+    }
+
+    public String Parse(String tag)
+    {
+        String[] path = tag.split("/");
+        return path[path.length-1];
+    }
+
+    public void playCategorySound(String cat)
+    {
+        AssetFileDescriptor openassets;
+
+        if(!play.isPlaying())
+        {
+            try
+            {
+                play.reset();
+                play = new MediaPlayer();
+                //open audio file from Assets folder
+                openassets = getAssets().openFd("xtra/HEADINGS/00" + cat + ".mp3");
+
+                //play = new MediaPlayer();
+                play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+                play.prepare();
+                play.start();
+
+
+            } // end try
+            catch (IOException e)
+            {
+                System.out.print(e.toString());
+            } // end catch
+
+        }
+
+
     }
 
 
