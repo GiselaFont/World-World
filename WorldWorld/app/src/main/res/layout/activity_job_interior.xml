@@ -59,6 +59,7 @@
             android:layout_width="290dp" />
 
         <Button
+            android:onClick="openCategory"
             android:background="@null"
             android:tag="@string/workers"
             android:id="@+id/clothes_cat3"

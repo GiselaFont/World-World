@@ -112,6 +112,8 @@ public class Quiz extends AppCompatActivity {
         bag = false;
         end = false;
 
+        play = new MediaPlayer();
+
         updateFirstQuestion();
     }
 
@@ -335,26 +337,28 @@ public class Quiz extends AppCompatActivity {
 
     public void checkAnswer(View view)
     {
-        String tag = view.getTag().toString();
-
-        if(tag.equals(Integer.toString(mcorrectId))){
-            mScore++;
-            updateScore();
-            playSound("Quiz_Sounds/correct_answer.mp3");
-            updateQuestion();
-            mtry = 0;
-        }
-        else{
-            playSound("Quiz_Sounds/incorrect_answer.mp3");
-            mtry++;
-            scoins++;
-            if(mtry == 2)
-            {
+        if(!play.isPlaying())
+        {
+            String tag = view.getTag().toString();
+            if(tag.equals(Integer.toString(mcorrectId))){
+                mScore++;
+                updateScore();
+                playSound("Quiz_Sounds/correct_answer.mp3");
                 updateQuestion();
                 mtry = 0;
+            }
+            else{
+                playSound("Quiz_Sounds/incorrect_answer.mp3");
+                mtry++;
+                scoins++;
+                if(mtry == 2)
+                {
+                    updateQuestion();
+                    mtry = 0;
+
+                }
 
             }
-
         }
 
     }
@@ -367,7 +371,7 @@ public class Quiz extends AppCompatActivity {
         {
             //open audio file from Assets folder
             openassets = getAssets().openFd(path);
-
+            play.reset();
             play = new MediaPlayer();
             play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
             play.prepare();
@@ -422,6 +426,7 @@ public class Quiz extends AppCompatActivity {
             n = num.nextInt(congrats.size()-1);
 
             openassets = getAssets().openFd(path + "/" + congrats.get(n));
+            play.reset();
             play = new MediaPlayer();
             play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
             play.prepare();

@@ -29,7 +29,7 @@
         <Button
         android:onClick="openCategory"
         android:background="@null"
-        android:tag="@string/animals"
+        android:tag="@string/families"
         android:id="@+id/clothes_cat1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -40,7 +40,7 @@
     <Button
         android:onClick="openCategory"
         android:background="@null"
-        android:tag="@string/babies"
+        android:tag="@string/farm_body"
         android:id="@+id/clothes_cat4"
         android:layout_height="170dp"
         android:layout_alignParentBottom="true"
@@ -51,7 +51,7 @@
     <Button
         android:onClick="openCategory"
         android:background="@null"
-        android:tag="@string/farm_body"
+        android:tag="@string/babies"
         android:id="@+id/clothes_cat2"
         android:layout_height="170dp"
         android:layout_alignParentTop="true"
@@ -62,7 +62,7 @@
     <Button
         android:onClick="openCategory"
         android:background="@null"
-        android:tag="@string/families"
+        android:tag="@string/animals"
         android:id="@+id/clothes_cat3"
         android:layout_height="170dp"
         android:layout_below="@+id/clothes_cat1"

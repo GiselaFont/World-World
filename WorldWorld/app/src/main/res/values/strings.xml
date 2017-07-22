@@ -32,7 +32,7 @@
     <string name="tubers">Grocery/tubers</string>
     <!--House array-->
     <string name="bathroom">House/bathroom</string>
-    <string name="bedroom">House/household/bedroom</string>
+    <string name="bedroom">House/bedroom</string>
     <string name="housewares">House/housewares</string>
     <string name="kitchen">House/kitchen</string>
     <string name="livingroom">House/livingroom</string>

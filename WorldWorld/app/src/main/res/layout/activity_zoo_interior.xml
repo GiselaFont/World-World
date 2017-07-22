@@ -117,6 +117,20 @@
             android:layout_alignRight="@+id/reptiles"
             android:layout_alignEnd="@+id/reptiles" />
 
+        <Button
+            android:onClick="openCategory"
+            android:tag="Animals/zoo/animals"
+            android:background="@null"
+            android:id="@+id/zoo"
+            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_alignBaseline="@+id/water"
+            android:layout_alignBottom="@+id/water"
+            android:layout_alignLeft="@+id/birds"
+            android:layout_alignStart="@+id/birds"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp" />
+
 
     </RelativeLayout>
 

@@ -115,6 +115,172 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
+        <Button
+            android:onClick="playSound"
+            android:background="#f7fdc3"
+            android:text="1"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/dolphin_1.mp3"
+            android:id="@+id/dolphin_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/dolphin"
+            android:layout_toLeftOf="@+id/shark"
+            android:layout_toStartOf="@+id/shark" />
+
+        <Button
+            android:onClick="playSound"
+            android:background="#d1f1fd"
+            android:text="2"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/dolphin_2.mp3"
+            android:id="@+id/dolphin_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/dolphin"
+            android:layout_toRightOf="@+id/dolphin_1"
+            android:layout_toEndOf="@+id/dolphin_1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
+
+        <Button
+            android:onClick="playSound"
+            android:background="#ffda81"
+            android:text="3"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/dolphin_3.mp3"
+            android:id="@+id/dolphin_3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp"
+            android:layout_below="@+id/dolphin"
+            android:layout_toRightOf="@+id/dolphin_2"
+            android:layout_toEndOf="@+id/dolphin_2" />
+
+        <Button
+            android:onClick="playSound"
+            android:background="#f7fdc3"
+            android:text="1"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/shark_1.mp3"
+            android:id="@+id/shark_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="23dp"
+            android:layout_below="@+id/shark"
+            android:layout_toRightOf="@+id/seal"
+            android:layout_toEndOf="@+id/seal" />
+
+        <Button
+            android:onClick="playSound"
+            android:background="#d1f1fd"
+            android:text="2"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/shark_2.mp3"
+            android:id="@+id/shark_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/shark_1"
+            android:layout_toRightOf="@+id/dolphin_2"
+            android:layout_toEndOf="@+id/dolphin_2"
+            android:layout_marginTop="0dp" />
+
+        <Button
+            android:onClick="playSound"
+            android:background="#ffda81"
+            android:text="3"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/shark_3.mp3"
+            android:id="@+id/shark_3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/shark_2"
+            android:layout_toRightOf="@+id/dolphin_3"
+            android:layout_toEndOf="@+id/dolphin_3"
+            android:layout_marginTop="0dp" />
+
+
+        <Button
+            android:onClick="playSound"
+            android:background="#f7fdc3"
+            android:text="1"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/squid_1.mp3"
+            android:id="@+id/squid_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/seal"
+            android:layout_alignStart="@+id/seal" />
+
+        <Button
+            android:onClick="playSound"
+            android:background="#d1f1fd"
+            android:text="2"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/squid_2.mp3"
+            android:id="@+id/squid_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_above="@+id/dolphin_2"
+            android:layout_alignLeft="@+id/squid_1"
+            android:layout_alignStart="@+id/squid_1" />
+
+        <Button
+            android:onClick="playSound"
+            android:background="#ffda81"
+            android:text="3"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/squid_3.mp3"
+            android:id="@+id/squid_3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/dolphin_1"
+            android:layout_alignLeft="@+id/seal"
+            android:layout_alignStart="@+id/seal" />
+
+        <Button
+            android:onClick="playSound"
+            android:background="#f7fdc3"
+            android:text="1"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/seal_1.mp3"
+            android:id="@+id/seal_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_above="@+id/shark_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:onClick="playSound"
+            android:background="#d1f1fd"
+            android:text="2"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/seal_2.mp3"
+            android:id="@+id/seal_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBaseline="@+id/shark_1"
+            android:layout_alignBottom="@+id/shark_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:onClick="playSound"
+            android:background="#ffda81"
+            android:text="3"
+            android:textColor="#000"
+            android:tag="Animals/zoo/facts/sounds/seal_3.mp3"
+            android:id="@+id/seal_3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/shark_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
 
     </RelativeLayout>
 

@@ -34,6 +34,10 @@ public class Interior extends AppCompatActivity {
         {
             setContentView(R.layout.activity_dogs_interior);
         }
+        else if(cat.contains("pets"))
+        {
+            setContentView(R.layout.activity_pets_interior);
+        }
         else if(cat.contains("bakery"))
         {
             setContentView(R.layout.activity_bakery_interior);

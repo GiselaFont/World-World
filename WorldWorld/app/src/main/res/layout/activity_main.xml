@@ -851,8 +851,8 @@
                     <Button
                         android:id="@+id/sign4"
                         android:background="@null"
-                        android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00construction_site.mp3"
+                        android:onClick="openStore"
+                        android:tag="Construction"
                         android:layout_height="40dp"
                         android:layout_width="40dp"
                         android:layout_alignParentTop="true"
@@ -1217,8 +1217,8 @@
                         android:layout_width="70dp"
                         android:layout_height="45dp"
                         android:background="@null"
-                        android:onClick="playSound"
-                        android:tag="xtra/dirt.mp3"
+                        android:onClick="openStore"
+                        android:tag="Construction"
                         android:layout_above="@+id/cockerspaniel" />
 
                     <Button
@@ -2295,6 +2295,17 @@
                         android:layout_below="@+id/pineapple"
                         android:layout_alignLeft="@+id/bloodhound1"
                         android:layout_alignStart="@+id/bloodhound1" />
+
+                    <Button
+                        android:id="@+id/sign8"
+                        android:background="@null"
+                        android:onClick="openInterior"
+                        android:tag="park"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/SUV"
+                        android:layout_toStartOf="@+id/SUV" />
 
 
               </RelativeLayout>
@@ -3644,8 +3655,8 @@
                     <Button
                         android:id="@+id/sign13"
                         android:background="@null"
-                        android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00people.mp3"
+                        android:onClick="openInterior"
+                        android:tag="people"
                         android:layout_width="30dp"
                         android:layout_marginRight="18dp"
                         android:layout_marginEnd="18dp"
@@ -3657,8 +3668,8 @@
                     <Button
                         android:id="@+id/sign14"
                         android:background="@null"
-                        android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00Things_People_Do.mp3"
+                        android:onClick="openInterior"
+                        android:tag="things"
                         android:layout_width="30dp"
                         android:layout_above="@+id/dancing_woman1"
                         android:layout_toRightOf="@+id/dancing_woman1"
@@ -7047,8 +7058,8 @@
                         android:layout_toEndOf="@+id/a_pedestrian_is_someone_who_walks.mp3" />
 
                     <Button
-                        android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00ocean_creatures.mp3"
+                        android:onClick="openStore"
+                        android:tag="Outdoors/ocean"
                         android:background="@null"
                         android:id="@+id/sign27"
                         android:layout_alignBaseline="@+id/boardwalk1"
@@ -7059,8 +7070,8 @@
                         android:layout_width="50dp" />
 
                     <Button
-                        android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00wild_animals.mp3"
+                        android:onClick="openStore"
+                        android:tag="Animals/wild"
                         android:background="@null"
                         android:id="@+id/sign28"
                         android:layout_height="50dp"
@@ -7482,8 +7493,8 @@
                         android:layout_toEndOf="@+id/merman" />
 
                     <Button
-                        android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00outdoor_places.mp3"
+                        android:onClick="openStore"
+                        android:tag="Outdoors/places"
                         android:background="@null"
                         android:id="@+id/sign29"
                         android:layout_width="50dp"
@@ -7493,8 +7504,8 @@
                         android:layout_toStartOf="@+id/hawk" />
 
                     <Button
-                        android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00sky_and_weather.mp3"
+                        android:onClick="openStore"
+                        android:tag="Outdoors/weather"
                         android:background="@null"
                         android:id="@+id/sign30"
                         android:layout_width="50dp"
@@ -7507,8 +7518,8 @@
                         android:layout_marginRight="70dp"/>
 
                     <Button
-                        android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00beach_creatures.mp3"
+                        android:onClick="openStore"
+                        android:tag="Outdoors/beach/creatures"
                         android:background="@null"
                         android:id="@+id/sign31"
                         android:layout_width="50dp"
@@ -7519,8 +7530,8 @@
                         android:layout_marginRight="80dp" />
 
                     <Button
-                        android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00Enchanted_Pretend_Island.mp3"
+                        android:onClick="openStore"
+                        android:tag="Animals/pretend"
                         android:background="@null"
                         android:id="@+id/sign32"
                         android:layout_width="50dp"
@@ -7871,8 +7882,8 @@
                         android:layout_toStartOf="@+id/butterfly17" />
 
                     <Button
-                        android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00beach_gear.mp3"
+                        android:onClick="openStore"
+                        android:tag="Outdoors/beach/gear"
                         android:background="@null"
                         android:id="@+id/sign33"
                         android:layout_width="50dp"
@@ -7992,13 +8003,13 @@
                 android:textSize="24sp"
                 android:textStyle="normal|bold" />
 
-            <ImageButton
+          <!--  <ImageButton
               android:id="@+id/interiors"
               android:onClick="openStore"
               android:tag="@string/interiors"
               android:background="@drawable/list"
               android:layout_width="50dp"
-              android:layout_height="50dp" />
+              android:layout_height="50dp" />-->
 
       </LinearLayout>
 

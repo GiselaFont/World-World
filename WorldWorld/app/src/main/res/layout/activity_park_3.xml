@@ -376,7 +376,7 @@
                     android:id="@+id/girl_cartwheel3"
                     android:background="@null"
                     android:onClick="playSound"
-                    android:tag="xtra/runner.mp3"
+                    android:tag="People/things/play/sounds/11girl_doing_a_cartwheel_with_a_fishbowl.mp3"
                     android:layout_height="70dp"
                     android:layout_width="30dp"
                     android:layout_alignBaseline="@+id/sand1"
@@ -452,6 +452,30 @@
                     android:layout_alignTop="@+id/sand1"
                     android:layout_toRightOf="@+id/tree1"
                     android:layout_toEndOf="@+id/tree1" />
+
+                <Button
+                    android:id="@+id/swings"
+                    android:background="@null"
+                    android:onClick="playSound"
+                    android:tag="Outdoors/park/equipment/sounds/02swings.mp3"
+                    android:layout_width="40dp"
+                    android:layout_height="100dp"
+                    android:layout_alignBottom="@+id/girl_with_doll1"
+                    android:layout_toLeftOf="@+id/tree1"
+                    android:layout_toStartOf="@+id/tree1"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginEnd="13dp" />
+
+                <Button
+                    android:id="@+id/swings1"
+                    android:background="@null"
+                    android:onClick="playSound"
+                    android:tag="Outdoors/park/equipment/sounds/02swings.mp3"
+                    android:layout_height="80dp"
+                    android:layout_alignBottom="@+id/benchd"
+                    android:layout_alignRight="@+id/girl_cartwheel3"
+                    android:layout_alignEnd="@+id/girl_cartwheel3"
+                    android:layout_width="20dp" />
 
 
             </RelativeLayout>

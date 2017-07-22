@@ -15,7 +15,7 @@
 
     <RelativeLayout
         android:layout_weight="1"
-        android:layout_width="0dp"
+        android:layout_width="600dp"
         android:layout_height="300dp">
 
         <ImageView
@@ -27,67 +27,50 @@
 
     <Button
         android:background="@null"
-        android:tag="@string/clothes"
+        android:onClick="openCategory"
+        android:tag="@string/bathroom"
         android:id="@+id/house_cat1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_height="170dp"
-        android:layout_width="190dp" />
+        android:layout_width="300dp"
+        android:layout_height="150dp" />
 
-    <Button
-        android:background="@null"
-        android:tag=" "
-        android:id="@+id/house_cat4"
-        android:layout_height="170dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_width="190dp" />
 
     <Button
         android:onClick="openCategory"
         android:background="@null"
-        android:tag="@string/sewing"
+        android:tag="@string/bedroom"
         android:id="@+id/house_cat2"
-        android:layout_height="170dp"
-        android:layout_width="190dp"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/house_cat1"
-        android:layout_toEndOf="@+id/house_cat1" />
+        android:layout_toEndOf="@+id/house_cat1"
+        android:layout_width="300dp"
+        android:layout_height="150dp" />
 
-    <Button
+        <Button
         android:background="@null"
-        android:tag=" "
-        android:id="@+id/house_cat3"
-        android:layout_height="170dp"
-        android:layout_width="190dp"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/house_cat2"
-        android:layout_toEndOf="@+id/house_cat2" />
-
-    <Button
-        android:background="@null"
-        android:tag="@string/accessories"
+        android:tag="@string/kitchen"
         android:id="@+id/house_cat5"
-        android:layout_height="170dp"
-        android:layout_width="190dp"
-        android:layout_below="@+id/house_cat1"
+            android:onClick="openCategory"
+            android:layout_below="@+id/house_cat1"
         android:layout_toRightOf="@+id/house_cat1"
-        android:layout_toEndOf="@+id/house_cat1" />
+        android:layout_toEndOf="@+id/house_cat1"
+            android:layout_width="300dp"
+            android:layout_height="150dp" />
 
-    <Button
-        android:background="@null"
-        android:tag="@string/accessories"
-        android:id="@+id/house_cat6"
-        android:layout_width="190dp"
-        android:layout_height="170dp"
-        android:layout_below="@+id/house_cat3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp" />
+        <Button
+            android:background="@null"
+            android:onClick="openCategory"
+            android:tag="@string/livingroom"
+            android:id="@+id/house_cat3"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
 
-</RelativeLayout>
+    </RelativeLayout>
 
     </LinearLayout>

@@ -39,7 +39,7 @@
     <Button
         android:onClick="openCategory"
         android:background="@null"
-        android:tag="@string/accessories"
+        android:tag="@string/sewing"
         android:id="@+id/clothes_cat4"
         android:layout_height="170dp"
         android:layout_alignParentBottom="true"
@@ -50,7 +50,7 @@
     <Button
         android:onClick="openCategory"
         android:background="@null"
-        android:tag="@string/sewing"
+        android:tag="@string/accessories"
         android:id="@+id/clothes_cat2"
         android:layout_height="170dp"
         android:layout_alignParentTop="true"
