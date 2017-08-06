@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../../../../../../Seagate Backup Plus Drive/My Files/Agusta University/Android Apps/WorldWorld/WorldWorld.iml" filepath="$PROJECT_DIR$/../../../../../../../Seagate Backup Plus Drive/My Files/Agusta University/Android Apps/WorldWorld/WorldWorld.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../../../../../Seagate Backup Plus Drive/My Files/Agusta University/Android Apps/WorldWorld/app/app.iml" filepath="$PROJECT_DIR$/../../../../../../../Seagate Backup Plus Drive/My Files/Agusta University/Android Apps/WorldWorld/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WorldWorld.iml" filepath="$PROJECT_DIR$/WorldWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
 </project>

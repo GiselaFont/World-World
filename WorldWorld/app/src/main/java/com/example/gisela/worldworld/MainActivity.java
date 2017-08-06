@@ -23,7 +23,7 @@ import android.view.View;
 import android.view.animation.ScaleAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.HorizontalScrollView;
+//import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -36,18 +36,23 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
+// For scrolling
+import android.view.MotionEvent;
+import android.view.GestureDetector;
+import android.support.v4.view.GestureDetectorCompat;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements GestureDetector.OnGestureListener{
 
     private MediaPlayer play;
-    private HorizontalScrollView hsv;
+    //private HorizontalScrollView hsv;
 
     //Zoom
     private float mScale = 1f;
     private ScaleGestureDetector mScaleDetector;
-    GestureDetector gestureDetector;
+    // GestureDetector gestureDetector;
     private RelativeLayout relativeLayout;
-
+    private GestureDetectorCompat gestureDetector;
 
 
     @Override
@@ -55,13 +60,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        hsv = (HorizontalScrollView) findViewById(R.id.horizontal_scroll);
+        //hsv = (HorizontalScrollView) findViewById(R.id.horizontal_scroll);
 
         play = new MediaPlayer();
         //Zoom
-        gestureDetector = new GestureDetector(this, new GestureListener());
+        // gestureDetector = new GestureDetector(this, new GestureListener());
+        this.gestureDetector = new GestureDetectorCompat(this, this);
         relativeLayout = (RelativeLayout) findViewById(R.id.activity_main);
 
+        /*
         mScaleDetector = new ScaleGestureDetector(this, new ScaleGestureDetector.SimpleOnScaleGestureListener()
         {
             @Override
@@ -84,9 +91,11 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        */
 
     }
 
+    /*
     //Zoom
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
@@ -95,7 +104,9 @@ public class MainActivity extends AppCompatActivity {
         gestureDetector.onTouchEvent(event);
         return gestureDetector.onTouchEvent(event);
     }
+    */
 
+/*
     private class GestureListener extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onDown(MotionEvent e) {
@@ -108,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        /*
         @Override
         public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
                                 float distanceY) {
@@ -124,8 +136,9 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         }
-    }
 
+    }
+*/
 
     public void playSound(View view)
     {
@@ -219,6 +232,39 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        this.gestureDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
 
+    @Override
+    public boolean onDown(MotionEvent motionEvent) {
+        return true;
+    }
 
+    @Override
+    public void onShowPress(MotionEvent motionEvent) {
+
+    }
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent motionEvent) {
+        return true;
+    }
+
+    @Override
+    public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
+        return true;
+    }
+
+    @Override
+    public void onLongPress(MotionEvent motionEvent) {
+
+    }
+
+    @Override
+    public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
+        return true;
+    }
 }
