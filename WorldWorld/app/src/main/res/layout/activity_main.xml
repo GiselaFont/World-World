@@ -185,15 +185,15 @@
 
                     <Button
                         android:id="@+id/jack_in_the_box"
-                        android:layout_width="60dp"
-                        android:layout_height="40dp"
                         android:layout_alignBaseline="@+id/dachshund"
                         android:layout_alignBottom="@+id/dachshund"
                         android:layout_toEndOf="@+id/crayons"
                         android:layout_toRightOf="@+id/crayons"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Mall/toys/toy/sounds/05jack_in_the_box.mp3" />
+                        android:tag="xtra/01.5_jack_in_the_box_says_look_at_me.mp3"
+                        android:layout_width="30dp"
+                        android:layout_height="50dp" />
 
                     <Button
                         android:id="@+id/sled"
@@ -339,14 +339,14 @@
 
                     <Button
                         android:id="@+id/pizza_car"
-                        android:layout_width="225dp"
                         android:layout_height="50dp"
                         android:layout_alignEnd="@+id/statue_man"
                         android:layout_alignRight="@+id/statue_man"
                         android:layout_centerVertical="true"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Vehicles/working/sounds/02pizza_delivery_car.mp3" />
+                        android:tag="Vehicles/working/sounds/02pizza_delivery_car.mp3"
+                        android:layout_width="150dp" />
 
                     <Button
                         android:id="@+id/chipanzee"
@@ -354,7 +354,7 @@
                         android:layout_height="70dp"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Animals/zoo/monkeys/sounds/01chimp.mp3"
+                        android:tag="Animals/zoo/monkeys/sounds/chimp_1.mp3"
                         android:layout_below="@+id/pizza_car"
                         android:layout_alignLeft="@+id/jack_in_the_box"
                         android:layout_alignStart="@+id/jack_in_the_box" />
@@ -607,6 +607,29 @@
                         android:layout_alignBottom="@+id/crayons"
                         android:layout_toLeftOf="@+id/street_light"
                         android:layout_toStartOf="@+id/street_light" />
+
+                    <Button
+                        android:id="@+id/jack_in_the_box1"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="Mall/toys/toy/sounds/05jack_in_the_box.mp3"
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:layout_above="@+id/eaglea"
+                        android:layout_toRightOf="@+id/jack_in_the_box"
+                        android:layout_toEndOf="@+id/jack_in_the_box" />
+
+                    <Button
+                        android:id="@+id/secret_child_stuff"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="xtra/secret_child_stuff.mp3"
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:layout_alignBaseline="@+id/walkingwoman"
+                        android:layout_alignBottom="@+id/walkingwoman"
+                        android:layout_toLeftOf="@+id/jack_in_the_box1"
+                        android:layout_toStartOf="@+id/jack_in_the_box1" />
 
 
               </RelativeLayout>

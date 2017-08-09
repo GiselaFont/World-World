@@ -239,7 +239,7 @@ public class Quiz extends AppCompatActivity {
 
     public List<QuestionLibrary> getQuizData()
     {
-        MediaPlayer mSoundQuestion;
+        MediaPlayer mSoundQuestion = new MediaPlayer();
         List<QuestionLibrary> data = new ArrayList<>();
         Drawable image1;
         Drawable image2;
@@ -276,9 +276,12 @@ public class Quiz extends AppCompatActivity {
             correctAnswer = soundpath1.get(0).replace("mp3", "png");
             soundpath1.remove(0);
 
-
-            mSoundQuestion = new MediaPlayer();
-            mSoundQuestion.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+            if(!mSoundQuestion.isPlaying())
+            {
+                mSoundQuestion.reset();
+                mSoundQuestion = new MediaPlayer();
+                mSoundQuestion.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+            }
 
 
             //get all the paths of the files inside the category folder
@@ -367,40 +370,45 @@ public class Quiz extends AppCompatActivity {
     {
         AssetFileDescriptor openassets;
 
-        try
+        if(!play.isPlaying())
         {
-            //open audio file from Assets folder
-            openassets = getAssets().openFd(path);
-            play.reset();
-            play = new MediaPlayer();
-            play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
-            play.prepare();
-            play.start();
-
-            if(path.equals("Quiz_Sounds/correct_answer.mp3"))
+            try
             {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try{
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
+                play.reset();
+                play = new MediaPlayer();
+
+                //open audio file from Assets folder
+                openassets = getAssets().openFd(path);
+                play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+                play.prepare();
+                play.start();
+
+                if(path.equals("Quiz_Sounds/correct_answer.mp3"))
+                {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try{
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            finally{
+                                playCorrectAnswer();
+                            }
                         }
-                        finally{
-                            playCorrectAnswer();
-                        }
-                    }
-                });
+                    });
 
-            }
+                }
 
 
-        } // end try
-        catch (IOException e)
-        {
-            System.out.print(e.toString());
-        } // end catch
+            } // end try
+            catch (IOException e)
+            {
+                System.out.print(e.toString());
+            } // end catch
+        }
+
 
 
     }
@@ -412,31 +420,35 @@ public class Quiz extends AppCompatActivity {
         String path = "Quiz_Sounds/correct";
         int n;
 
-        try
+        if(!play.isPlaying())
         {
+            try
+            {
 
-            //get congrats sounds
-            //get all the path of the files inside the folder
-            String[] congrat = assets.list(path);
+                //get congrats sounds
+                //get all the path of the files inside the folder
+                String[] congrat = assets.list(path);
 
-            congrats = new LinkedList<>(Arrays.asList(congrat));
+                congrats = new LinkedList<>(Arrays.asList(congrat));
 
-            //shuffle sounds
-            Collections.shuffle(congrats);
-            n = num.nextInt(congrats.size()-1);
+                //shuffle sounds
+                Collections.shuffle(congrats);
+                n = num.nextInt(congrats.size()-1);
 
-            openassets = getAssets().openFd(path + "/" + congrats.get(n));
-            play.reset();
-            play = new MediaPlayer();
-            play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
-            play.prepare();
-            play.start();
+                play.reset();
+                play = new MediaPlayer();
+                openassets = getAssets().openFd(path + "/" + congrats.get(n));
+                play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+                play.prepare();
+                play.start();
 
-        } // end try
-        catch (IOException e)
-        {
-            System.out.print(e.toString());
-        } // end catch
+            } // end try
+            catch (IOException e)
+            {
+                System.out.print(e.toString());
+            } // end catch
+
+        }
 
 
     }

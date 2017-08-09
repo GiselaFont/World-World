@@ -87,22 +87,28 @@ public class QuizCelebrate extends AppCompatActivity {
     {
         AssetFileDescriptor openassets;
 
-        try
+        if(!play.isPlaying())
         {
-            //open audio file from Assets folder
-            openassets = getAssets().openFd(path);
+            try
+            {
+                play.reset();
+                play = new MediaPlayer();
 
-            play = new MediaPlayer();
-            play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
-            play.prepare();
-            play.start();
+                //open audio file from Assets folder
+                openassets = getAssets().openFd(path);
+
+                play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+                play.prepare();
+                play.start();
 
 
-        } // end try
-        catch (IOException e)
-        {
-            System.out.print(e.toString());
-        } // end catch
+            } // end try
+            catch (IOException e)
+            {
+                System.out.print(e.toString());
+            } // end catch
+        }
+
 
 
     }

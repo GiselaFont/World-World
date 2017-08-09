@@ -48,6 +48,8 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
             cat = b.getString("cat");
         }
 
+        play = new MediaPlayer();
+
         //recycler view code and get data
         mrecyclerView = (RecyclerView) findViewById(R.id.drawerList);
         adapter = new MyAdapter(getApplicationContext(),getData());
@@ -125,43 +127,50 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
         AssetManager assets = getAssets(); // get app's AssetManager
         AssetFileDescriptor openassets;
 
-        try
+        if(!play.isPlaying())
         {
-            if(!cat.equals("Interiors"))
+            try
             {
-                //get all the path of the files inside Animals folder
-                String[] path = assets.list(cat + "/sounds");
-                // get an InputStream to the asset representing the next item
-                //provide access to the file
-                openassets = getAssets().openFd(cat + "/sounds/" + path[position]);
+                if(!cat.equals("Interiors"))
+                {
+                    //get all the path of the files inside Animals folder
+                    String[] path = assets.list(cat + "/sounds");
 
-                play = new MediaPlayer();
-                play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
-                play.prepare();
-                play.start();
-            }
-            else{
-                //get all the path of the files inside Animals folder
-                String[] path = assets.list(cat);
+                    play.reset();
+                    play = new MediaPlayer();
 
-                path[position] = path[position].substring(path[position].indexOf("-")+1);
+                    // get an InputStream to the asset representing the next item
+                    //provide access to the file
+                    openassets = getAssets().openFd(cat + "/sounds/" + path[position]);
 
-                //name of the file to open the right interior
-                String tag = path[position];
-                Intent interiorActivity = new Intent(this, Interior.class);
-                Bundle b = new Bundle();
-                b.putString("cat",tag);
-                interiorActivity.putExtras(b);
-                startActivity(interiorActivity);
-            }
+                    play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+                    play.prepare();
+                    play.start();
+                }
+                else{
+                    //get all the path of the files inside Animals folder
+                    String[] path = assets.list(cat);
+
+                    path[position] = path[position].substring(path[position].indexOf("-")+1);
+
+                    //name of the file to open the right interior
+                    String tag = path[position];
+                    Intent interiorActivity = new Intent(this, Interior.class);
+                    Bundle b = new Bundle();
+                    b.putString("cat",tag);
+                    interiorActivity.putExtras(b);
+                    startActivity(interiorActivity);
+                }
 
 
 
-        } // end try
-        catch (IOException e)
-        {
-            System.out.print(e.toString());
-        } // end catch
+            } // end try
+            catch (IOException e)
+            {
+                System.out.print(e.toString());
+            } // end catch
+
+        }
 
     }
 

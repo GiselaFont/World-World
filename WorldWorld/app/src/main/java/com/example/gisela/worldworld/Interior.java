@@ -235,10 +235,11 @@ public class Interior extends AppCompatActivity {
             try
             {
                 play.reset();
+                play = new MediaPlayer();
+
                 //open audio file from Assets folder
                 openassets = getAssets().openFd(tag);
 
-                play = new MediaPlayer();
                 play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
                 play.prepare();
                 play.start();
@@ -304,10 +305,10 @@ public class Interior extends AppCompatActivity {
             try
             {
                 play.reset();
+                play = new MediaPlayer();
                 //open audio file from Assets folder
                 openassets = getAssets().openFd("xtra/HEADINGS/00" + cat + ".mp3");
 
-                play = new MediaPlayer();
                 play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
                 play.prepare();
                 play.start();
