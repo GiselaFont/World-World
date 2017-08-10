@@ -175,12 +175,34 @@
                 android:id="@+id/seagulls1"
                 android:background="@null"
                 android:onClick="playSound"
-                android:tag="Outdoors/beach/creatures/sounds/05seagulls.mp3"
+                android:tag="xtra/16_one_bird_came_to_visit_the_other.mp3"
                 android:layout_height="50dp"
                 android:layout_width="50dp"
-                android:layout_alignTop="@+id/bluejayd"
-                android:layout_alignRight="@+id/swan"
-                android:layout_alignEnd="@+id/swan" />
+                android:layout_alignBottom="@+id/bluejayd"
+                android:layout_toRightOf="@+id/seagulls"
+                android:layout_toEndOf="@+id/seagulls" />
+
+            <Button
+                android:id="@+id/pond"
+                android:background="@null"
+                android:onClick="playSound"
+                android:tag="xtra/08_big_pond_or_small_lake.mp3"
+                android:layout_width="50dp"
+                android:layout_below="@+id/seagulls"
+                android:layout_toLeftOf="@+id/seagulls1"
+                android:layout_toStartOf="@+id/seagulls1"
+                android:layout_height="40dp" />
+
+            <Button
+                android:id="@+id/pond1"
+                android:background="@null"
+                android:onClick="playSound"
+                android:tag="xtra/08_big_pond_or_small_lake.mp3"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/wrens"
+                android:layout_toLeftOf="@+id/seagulls"
+                android:layout_toStartOf="@+id/seagulls" />
 
         </RelativeLayout>
     </LinearLayout>

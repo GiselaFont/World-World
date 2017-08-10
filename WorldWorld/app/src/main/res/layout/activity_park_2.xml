@@ -345,6 +345,18 @@
                     android:layout_toLeftOf="@+id/boy_on_stick"
                     android:layout_toStartOf="@+id/boy_on_stick" />
 
+                <Button
+                    android:id="@+id/baseball"
+                    android:background="@null"
+                    android:onClick="playSound"
+                    android:tag="Outdoors/places/sounds/07path.mp3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBaseline="@+id/rabbita"
+                    android:layout_alignBottom="@+id/rabbita"
+                    android:layout_toLeftOf="@+id/boy_on_stick"
+                    android:layout_toStartOf="@+id/boy_on_stick" />
+
 
             </RelativeLayout>
 

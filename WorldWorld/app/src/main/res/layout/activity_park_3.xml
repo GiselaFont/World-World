@@ -107,7 +107,7 @@
         android:id="@+id/locust"
         android:background="@null"
         android:onClick="playSound"
-        android:tag="Outdoors/park/bugs/19cicada.mp3"
+        android:tag="Outdoors/park/bugs/sounds/19cicada.mp3"
         android:layout_width="25dp"
         android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
@@ -376,7 +376,7 @@
                     android:id="@+id/girl_cartwheel3"
                     android:background="@null"
                     android:onClick="playSound"
-                    android:tag="People/things/play/sounds/11girl_doing_a_cartwheel_with_a_fishbowl.mp3"
+                    android:tag="People/people/girls/sounds/11girl_doing_a_cartwheel_with_a_fishbowl.mp3"
                     android:layout_height="70dp"
                     android:layout_width="30dp"
                     android:layout_alignBaseline="@+id/sand1"
@@ -476,6 +476,17 @@
                     android:layout_alignRight="@+id/girl_cartwheel3"
                     android:layout_alignEnd="@+id/girl_cartwheel3"
                     android:layout_width="20dp" />
+
+                <Button
+                    android:id="@+id/monkey_bars1"
+                    android:background="@null"
+                    android:onClick="playSound"
+                    android:tag="Outdoors/park/equipment/sounds/03monkey_bars.mp3"
+                    android:layout_height="40dp"
+                    android:layout_width="60dp"
+                    android:layout_below="@+id/path3"
+                    android:layout_toRightOf="@+id/benchd"
+                    android:layout_toEndOf="@+id/benchd" />
 
 
             </RelativeLayout>
