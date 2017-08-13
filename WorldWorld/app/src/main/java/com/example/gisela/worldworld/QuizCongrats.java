@@ -43,28 +43,22 @@ public class QuizCongrats extends AppCompatActivity {
     {
         AssetFileDescriptor openassets;
 
-        if(!play.isPlaying())
+        try
         {
-            try
-            {
+            //open audio file from Assets folder
+            openassets = getAssets().openFd(path);
 
-                play.reset();
-                play = new MediaPlayer();
-
-                //open audio file from Assets folder
-                openassets = getAssets().openFd(path);
-                play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
-                play.prepare();
-                play.start();
+            play = new MediaPlayer();
+            play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
+            play.prepare();
+            play.start();
 
 
-            } // end try
-            catch (IOException e)
-            {
-                System.out.print(e.toString());
-            } // end catch
-        }
-
+        } // end try
+        catch (IOException e)
+        {
+            System.out.print(e.toString());
+        } // end catch
 
 
     }

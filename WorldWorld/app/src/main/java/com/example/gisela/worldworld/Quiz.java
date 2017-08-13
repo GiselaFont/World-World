@@ -239,7 +239,7 @@ public class Quiz extends AppCompatActivity {
 
     public List<QuestionLibrary> getQuizData()
     {
-        MediaPlayer mSoundQuestion = new MediaPlayer();
+        MediaPlayer mSoundQuestion;
         List<QuestionLibrary> data = new ArrayList<>();
         Drawable image1;
         Drawable image2;
@@ -276,12 +276,9 @@ public class Quiz extends AppCompatActivity {
             correctAnswer = soundpath1.get(0).replace("mp3", "png");
             soundpath1.remove(0);
 
-            if(!mSoundQuestion.isPlaying())
-            {
-                mSoundQuestion.reset();
-                mSoundQuestion = new MediaPlayer();
-                mSoundQuestion.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
-            }
+
+            mSoundQuestion = new MediaPlayer();
+            mSoundQuestion.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
 
 
             //get all the paths of the files inside the category folder
@@ -408,8 +405,6 @@ public class Quiz extends AppCompatActivity {
                 System.out.print(e.toString());
             } // end catch
         }
-
-
 
     }
 

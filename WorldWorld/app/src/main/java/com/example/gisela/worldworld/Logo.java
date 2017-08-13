@@ -49,11 +49,10 @@ public class Logo extends AppCompatActivity {
             try
             {
                 play.reset();
-                play = new MediaPlayer();
-
                 //open audio file from Assets folder
                 openassets = getAssets().openFd("xtra/HEADINGS/00brainy_words_2000.mp3");
 
+                play = new MediaPlayer();
                 play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
                 play.prepare();
                 play.start();

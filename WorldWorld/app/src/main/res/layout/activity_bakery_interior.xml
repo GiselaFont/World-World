@@ -28,7 +28,7 @@
     <Button
         android:onClick="openCategory"
         android:background="@null"
-        android:tag="@string/sweets"
+        android:tag="@string/bread"
         android:id="@+id/bakery_cat2"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -40,7 +40,7 @@
     <Button
         android:onClick="openCategory"
         android:background="@null"
-        android:tag="@string/bread"
+        android:tag="@string/sweets"
         android:id="@+id/bakery_cat1"
         android:layout_width="500dp"
         android:layout_height="150dp"

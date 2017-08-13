@@ -185,13 +185,24 @@ public class MainActivity extends AppCompatActivity {
 
     public String Parse(String tag)
     {
-        String[] path = tag.split("/");
-        return path[path.length-1];
+        if(!tag.equals("Construction"))
+        {
+            String[] path = tag.split("/");
+            tag = path[path.length-1];
+        }
+
+        return tag;
+
     }
 
     public void playCategorySound(String cat)
     {
         AssetFileDescriptor openassets;
+
+        if(cat.equals("clothes"))
+        {
+            cat = "Clothing";
+        }
 
         if(!play.isPlaying())
         {

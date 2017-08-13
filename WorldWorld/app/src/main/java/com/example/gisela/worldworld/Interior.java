@@ -235,11 +235,10 @@ public class Interior extends AppCompatActivity {
             try
             {
                 play.reset();
-                play = new MediaPlayer();
-
                 //open audio file from Assets folder
                 openassets = getAssets().openFd(tag);
 
+                play = new MediaPlayer();
                 play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
                 play.prepare();
                 play.start();
@@ -292,8 +291,26 @@ public class Interior extends AppCompatActivity {
 
     public String Parse(String tag)
     {
-        String[] path = tag.split("/");
-        return path[path.length-1];
+        if(tag.equals("Vehicles/fun"))
+        {
+            tag = tag.replace("/","_");
+        }
+        else if(tag.equals("Mall/hair_salon/boys"))
+        {
+            tag = "hair_boys";
+        }
+        else if(tag.equals("Mall/hair_salon/girls"))
+        {
+            tag = "hair_girls";
+        }
+        else{
+
+            String[] path = tag.split("/");
+            tag = path[path.length-1];
+        }
+
+        return tag;
+
     }
 
     public void playCategorySound(String cat)
@@ -305,10 +322,10 @@ public class Interior extends AppCompatActivity {
             try
             {
                 play.reset();
-                play = new MediaPlayer();
                 //open audio file from Assets folder
                 openassets = getAssets().openFd("xtra/HEADINGS/00" + cat + ".mp3");
 
+                play = new MediaPlayer();
                 play.setDataSource(openassets.getFileDescriptor(),openassets.getStartOffset(),openassets.getLength());
                 play.prepare();
                 play.start();
