@@ -65,7 +65,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/meat/sounds/05wolf.mp3"
+            android:tag="Animals/zoo/voices/wolf.mp3"
             android:id="@+id/wolf"
             android:layout_height="170dp"
             android:layout_width="110dp"
@@ -77,7 +77,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/meat/sounds/01tiger.mp3"
+            android:tag="Animals/zoo/voices/tiger.mp3"
             android:id="@+id/tiger"
             android:layout_width="130dp"
             android:layout_alignTop="@+id/wolf"
@@ -88,7 +88,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/meat/sounds/02lion.mp3"
+            android:tag="Animals/zoo/voices/lion.mp3"
             android:id="@+id/lion"
             android:layout_width="110dp"
             android:layout_height="110dp"
@@ -99,7 +99,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/meat/sounds/03jaguar_.mp3"
+            android:tag="Animals/zoo/voices/jaguar.mp3"
             android:id="@+id/jaguar"
             android:layout_height="80dp"
             android:layout_width="100dp"

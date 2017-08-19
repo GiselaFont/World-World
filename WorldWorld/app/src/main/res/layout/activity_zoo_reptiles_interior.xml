@@ -66,7 +66,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/reptiles/sounds/04rattlesnake.mp3"
+            android:tag="Animals/zoo/voices/rattlesnake.mp3"
             android:id="@+id/rattlesnake"
             android:layout_width="190dp"
             android:layout_height="120dp"
@@ -79,7 +79,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/reptiles/sounds/02iguana_lizard.mp3"
+            android:tag="Animals/zoo/voices/iguana_lizard.mp3"
             android:id="@+id/iguana"
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/turtle"
@@ -91,7 +91,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/reptiles/sounds/03turtle.mp3"
+            android:tag="Animals/zoo/voices/turtle.mp3"
             android:id="@+id/turtle"
             android:layout_width="140dp"
             android:layout_height="100dp"
@@ -105,7 +105,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/reptiles/sounds/01alligator.mp3"
+            android:tag="Animals/zoo/voices/alligator.mp3"
             android:id="@+id/alligator"
             android:layout_height="150dp"
             android:layout_width="150dp"

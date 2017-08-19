@@ -67,7 +67,7 @@
         <Button
             android:background="@null"
             android:onClick="playSound"
-            android:tag="Animals/zoo/water/sounds/02dolphin.mp3"
+            android:tag="Animals/zoo/voices/dolphin.mp3"
             android:id="@+id/dolphin"
             android:layout_width="200dp"
             android:layout_alignParentTop="true"
@@ -80,7 +80,7 @@
         <Button
             android:background="@null"
             android:onClick="playSound"
-            android:tag="Animals/zoo/water/sounds/03shark(reduce_static).mp3"
+            android:tag="Animals/zoo/voices/shark.mp3"
             android:id="@+id/shark"
             android:layout_height="80dp"
             android:layout_centerVertical="true"
@@ -91,7 +91,7 @@
         <Button
             android:background="@null"
             android:onClick="playSound"
-            android:tag="Animals/zoo/water/sounds/04squid_.mp3"
+            android:tag="Animals/zoo/voices/squid.mp3"
             android:id="@+id/squid"
             android:layout_width="120dp"
             android:layout_above="@+id/seal"
@@ -104,7 +104,7 @@
         <Button
             android:background="@null"
             android:onClick="playSound"
-            android:tag="Animals/zoo/water/sounds/01seal_or_sea_lion.mp3"
+            android:tag="Animals/zoo/voices/seal.mp3"
             android:id="@+id/seal"
             android:layout_width="200dp"
             android:layout_height="150dp"

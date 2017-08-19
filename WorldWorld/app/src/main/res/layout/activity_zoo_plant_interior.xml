@@ -67,7 +67,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/plant/sounds/03giraffe_.mp3"
+            android:tag="Animals/zoo/voices/giraffe.mp3"
             android:id="@+id/giraffe"
             android:layout_width="100dp"
             android:layout_height="280dp"
@@ -78,7 +78,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/plant/sounds/04hippo_.mp3"
+            android:tag="Animals/zoo/voices/hippo.mp3"
             android:id="@+id/hippo"
             android:layout_width="120dp"
             android:layout_height="100dp"
@@ -91,7 +91,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/plant/sounds/02kangaroo.mp3"
+            android:tag="Animals/zoo/voices/kangaroo.mp3"
             android:id="@+id/kangaroo"
             android:layout_height="160dp"
             android:layout_marginLeft="37dp"
@@ -105,7 +105,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/plant/sounds/01panda.mp3"
+            android:tag="Animals/zoo/voices/panda.mp3"
             android:id="@+id/panda"
             android:layout_width="100dp"
             android:layout_height="110dp"
