@@ -49,6 +49,17 @@
             android:layout_alignLeft="@+id/back"
             android:layout_alignStart="@+id/back" />
 
+        <Button
+            android:id="@+id/fact"
+            android:onClick="playSound"
+            android:tag="Animals/zoo/zoo_interiors/04meat_.mp3"
+            android:background="@drawable/fact"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/home"
+            android:layout_alignLeft="@+id/home"
+            android:layout_alignStart="@+id/home" />
+
     </RelativeLayout>
     <RelativeLayout
         android:layout_weight="1"

@@ -87,6 +87,7 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
                 path[i] = path[i].replace("_", " ");
                 path[i] = path[i].replace("+", " ");
                 path[i] = path[i].replace("=", " ");
+                path[i] = path[i].replace("}", "?");
 
                 if(!cat.equals("Interiors"))
                 {

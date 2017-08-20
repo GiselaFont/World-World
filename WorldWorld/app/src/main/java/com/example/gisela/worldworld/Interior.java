@@ -30,14 +30,6 @@ public class Interior extends AppCompatActivity {
         {
             setContentView(R.layout.activity_toys_interior);
         }
-        else if(cat.contains("dogs"))
-        {
-            setContentView(R.layout.activity_dogs_interior);
-        }
-        else if(cat.contains("pets"))
-        {
-            setContentView(R.layout.activity_pets_interior);
-        }
         else if(cat.contains("bakery"))
         {
             setContentView(R.layout.activity_bakery_interior);
@@ -125,10 +117,6 @@ public class Interior extends AppCompatActivity {
         {
             setContentView(R.layout.activity_medical_interior);
         }
-        else if(cat.contains("restaurant"))
-        {
-            setContentView(R.layout.activity_restaurant_interior);
-        }
         else if(cat.contains("things"))
         {
             setContentView(R.layout.activity_peopledo_interior);
@@ -136,46 +124,6 @@ public class Interior extends AppCompatActivity {
         else if(cat.contains("people"))
         {
             setContentView(R.layout.activity_people_interior);
-        }
-        else if(cat.contains("hats"))
-        {
-            setContentView(R.layout.activity_hats_interior);
-        }
-        else if(cat.contains("shoes"))
-        {
-            setContentView(R.layout.activity_shoes_interior);
-        }
-        else if(cat.contains("wares"))
-        {
-            setContentView(R.layout.activity_housewares_interior);
-        }
-        else if(cat.contains("ocean"))
-        {
-            setContentView(R.layout.activity_ocean_creatures_interior);
-        }
-        else if(cat.contains("wild"))
-        {
-            setContentView(R.layout.activity_wild_animals_interior);
-        }
-        else if(cat.contains("places"))
-        {
-            setContentView(R.layout.activity_places_interior);
-        }
-        else if(cat.contains("weather"))
-        {
-            setContentView(R.layout.activity_sky_interior);
-        }
-        else if(cat.contains("creatures"))
-        {
-            setContentView(R.layout.activity_beach_interior);
-        }
-        else if(cat.contains("enchanted"))
-        {
-            setContentView(R.layout.activity_enchanted_interior);
-        }
-        else if(cat.contains("gear"))
-        {
-            setContentView(R.layout.activity_gear_interior);
         }
         else if(cat.contains("pediatrician"))
         {
