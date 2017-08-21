@@ -185,15 +185,15 @@
 
                     <Button
                         android:id="@+id/jack_in_the_box"
-                        android:layout_width="60dp"
-                        android:layout_height="40dp"
                         android:layout_alignBaseline="@+id/dachshund"
                         android:layout_alignBottom="@+id/dachshund"
                         android:layout_toEndOf="@+id/crayons"
                         android:layout_toRightOf="@+id/crayons"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Mall/toys/toy/sounds/05jack_in_the_box.mp3" />
+                        android:tag="xtra/01.5_jack_in_the_box_says_look_at_me.mp3"
+                        android:layout_width="30dp"
+                        android:layout_height="50dp" />
 
                     <Button
                         android:id="@+id/sled"
@@ -339,14 +339,14 @@
 
                     <Button
                         android:id="@+id/pizza_car"
-                        android:layout_width="225dp"
                         android:layout_height="50dp"
                         android:layout_alignEnd="@+id/statue_man"
                         android:layout_alignRight="@+id/statue_man"
                         android:layout_centerVertical="true"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Vehicles/working/sounds/02pizza_delivery_car.mp3" />
+                        android:tag="Vehicles/working/sounds/02pizza_delivery_car.mp3"
+                        android:layout_width="150dp" />
 
                     <Button
                         android:id="@+id/chipanzee"
@@ -354,7 +354,7 @@
                         android:layout_height="70dp"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Animals/zoo/monkeys/sounds/01chimp.mp3"
+                        android:tag="xtra/chimp_1.mp3"
                         android:layout_below="@+id/pizza_car"
                         android:layout_alignLeft="@+id/jack_in_the_box"
                         android:layout_alignStart="@+id/jack_in_the_box" />
@@ -608,6 +608,29 @@
                         android:layout_toLeftOf="@+id/street_light"
                         android:layout_toStartOf="@+id/street_light" />
 
+                    <Button
+                        android:id="@+id/jack_in_the_box1"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="Mall/toys/toy/sounds/05jack_in_the_box.mp3"
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:layout_above="@+id/eaglea"
+                        android:layout_toRightOf="@+id/jack_in_the_box"
+                        android:layout_toEndOf="@+id/jack_in_the_box" />
+
+                    <Button
+                        android:id="@+id/secret_child_stuff"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="xtra/secret_child_stuff.mp3"
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:layout_alignBaseline="@+id/walkingwoman"
+                        android:layout_alignBottom="@+id/walkingwoman"
+                        android:layout_toLeftOf="@+id/jack_in_the_box1"
+                        android:layout_toStartOf="@+id/jack_in_the_box1" />
+
 
               </RelativeLayout>
 
@@ -858,6 +881,40 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignLeft="@+id/carpenter_chiseling"
                         android:layout_alignStart="@+id/carpenter_chiseling" />
+
+                    <Button
+                        android:id="@+id/girl_reading1"
+                        android:layout_width="20dp"
+                        android:layout_height="50dp"
+                        android:layout_alignBaseline="@+id/guitar"
+                        android:layout_alignBottom="@+id/guitar"
+                        android:layout_toEndOf="@+id/guitar"
+                        android:layout_toRightOf="@+id/guitar"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="People/people/girls/sounds/08girl_reading_a_book.mp3" />
+
+                    <Button
+                        android:id="@+id/tree4"
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="Outdoors/park/landscape/sounds/01tree.mp3"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignRight="@+id/tank_truck"
+                        android:layout_alignEnd="@+id/tank_truck" />
+
+                    <Button
+                        android:id="@+id/giraffesc"
+                        android:layout_width="40dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="xtra/giraffe_2.mp3"
+                        android:layout_below="@+id/laborer_shoveling"
+                        android:layout_toLeftOf="@+id/dump_truck"
+                        android:layout_toStartOf="@+id/dump_truck" />
 
 
               </RelativeLayout>
@@ -1207,7 +1264,7 @@
                         android:layout_height="60dp"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="'People/people/boys/sounds/08I_do_not_know.mp3'"
+                        android:tag="xtra/she_said_she_saw_a_cantaur_leap_over_a_wolf.mp3"
                         android:layout_above="@+id/rattlesnake"
                         android:layout_toLeftOf="@+id/man_walking_dog"
                         android:layout_toStartOf="@+id/man_walking_dog" />
@@ -1291,7 +1348,28 @@
                         android:layout_marginBottom="-30dp" />
 
 
+                    <Button
+                        android:id="@+id/bucket2"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="House/housewares/sounds/10bucket.mp3"
+                        android:layout_alignTop="@+id/pedestrian_looking"
+                        android:layout_alignRight="@+id/hard_hatb"
+                        android:layout_alignEnd="@+id/hard_hatb" />
 
+
+                    <Button
+                        android:id="@+id/pedestrian_looking1"
+                        android:layout_width="20dp"
+                        android:layout_height="60dp"
+                        android:layout_alignBottom="@+id/traffic_cones2b"
+                        android:layout_alignEnd="@+id/safety_barrier1"
+                        android:layout_alignRight="@+id/safety_barrier1"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="xtra/04_he_said_he_saw_a_centaurette.mp3" />
 
               </RelativeLayout>
 
@@ -1560,7 +1638,7 @@
                         android:layout_toRightOf="@+id/ladystroller"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Animals/zoo/animals/sounds/03macaw_parrot.mp3" />
+                        android:tag="Animals/zoo/animals/sounds/07macaw_parrot.mp3" />
 
                     <Button
                         android:id="@+id/ferretc"
@@ -1970,7 +2048,7 @@
                         android:layout_height="60dp"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="People/people/boys/sounds/19child_with_a_sucker_in_a_wagon.mp3"
+                        android:tag="xtra/08_the_little_boy_said_he_wanted_to_ride_the_tractor.mp3"
                         android:layout_below="@+id/park1"
                         android:layout_toRightOf="@+id/hippo"
                         android:layout_toEndOf="@+id/hippo"
@@ -2953,7 +3031,7 @@
                         android:layout_toStartOf="@+id/birthday_cake"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00bedroom_.mp3" />
+                        android:tag="xtra/HEADINGS/00bedroom.mp3" />
 
                     <Button
                         android:id="@+id/bathroom"
@@ -2984,7 +3062,7 @@
                         android:layout_height="45dp"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00living_room.mp3"
+                        android:tag="xtra/HEADINGS/00livingroom.mp3"
                         android:layout_alignBaseline="@+id/bathroom"
                         android:layout_alignBottom="@+id/bathroom"
                         android:layout_toLeftOf="@+id/bedroom"
@@ -3156,7 +3234,7 @@
                         android:layout_height="30dp"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="xtra/zhis_mouth_said_i_want_to_go_for_a_walk.mp3"
+                        android:tag="xtra/13_this_is_not_an_invisible_dog.mp3"
                         android:layout_marginLeft="16dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="28dp"
@@ -3197,17 +3275,6 @@
                         android:background="@null"
                         android:onClick="playSound"
                         android:tag="Vehicles/passenger/sounds/02convertible.mp3" />
-
-                    <Button
-                        android:id="@+id/dog_walking_boy"
-                        android:layout_width="55dp"
-                        android:layout_height="90dp"
-                        android:background="@null"
-                        android:onClick="playSound"
-                        android:tag="People/people/boys/sounds/06dog_walking_a_boy.mp3"
-                        android:layout_alignTop="@+id/beagle"
-                        android:layout_toRightOf="@+id/beagle"
-                        android:layout_toEndOf="@+id/beagle" />
 
                     <Button
                         android:id="@+id/plumber"
@@ -3323,7 +3390,7 @@
                         android:layout_height="100dp"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Animals/wild/sounds/buffalo_or_bison_.mp3"
+                        android:tag="Animals/wild/sounds/06buffalo_or_bison_.mp3"
                         android:layout_below="@+id/cardinal"
                         android:layout_toLeftOf="@+id/runner_woman"
                         android:layout_toStartOf="@+id/runner_woman" />
@@ -3530,7 +3597,7 @@
                         android:id="@+id/kids_only1"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Animals/zoo/meat/sounds/01tiger.mp3"
+                        android:tag="Animals/zoo/animals/sounds/13tiger.mp3"
                         android:layout_height="50dp"
                         android:layout_width="60dp"
                         android:layout_above="@+id/stunk_family"
@@ -3686,6 +3753,28 @@
                         android:layout_above="@+id/stunk_family"
                         android:layout_toRightOf="@+id/stunk_family"
                         android:layout_toEndOf="@+id/stunk_family" />
+
+                    <Button
+                        android:id="@+id/dog_walking_boy"
+                        android:layout_height="90dp"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="People/people/boys/sounds/06dog_walking_a_boy.mp3"
+                        android:layout_width="40dp"
+                        android:layout_alignBottom="@+id/fireman"
+                        android:layout_toRightOf="@+id/clown_balloons1g"
+                        android:layout_toEndOf="@+id/clown_balloons1g" />
+
+                    <Button
+                        android:id="@+id/go_for_a_walk"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="xtra/zhis_mouth_said_i_want_to_go_for_a_walk.mp3"
+                        android:layout_above="@+id/cardinal"
+                        android:layout_toRightOf="@+id/armadillo"
+                        android:layout_toEndOf="@+id/armadillo" />
 
 
               </RelativeLayout>
@@ -4072,7 +4161,7 @@
 
                     <Button
                         android:onClick="playSound"
-                        android:tag="xtra/16_one_bird_came_to_visit_the_other.mp3"
+                        android:tag="xtra/14_the_clown_is_a_juggler.mp3"
                         android:background="@null"
                         android:id="@+id/sea_gulls"
                         android:layout_height="40dp"
@@ -4242,20 +4331,21 @@
                         android:layout_marginEnd="26dp" />
 
                     <Button
-                        android:onClick="playSound"
-                        android:tag="Animals/pets/sounds/09ferret.mp3"
                         android:id="@+id/ferret"
-                        android:background="@null"
                         android:layout_width="40dp"
-                        android:layout_height="25dp"
-                        android:layout_alignBottom="@+id/farmanimals"
-                        android:layout_toRightOf="@+id/store_music"
-                        android:layout_toEndOf="@+id/store_music" />
+                        android:layout_height="30dp"
+                        android:layout_alignBaseline="@+id/boy_pogo_stick"
+                        android:layout_alignBottom="@+id/boy_pogo_stick"
+                        android:layout_alignLeft="@+id/trumpet"
+                        android:layout_alignStart="@+id/trumpet"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="Animals/pets/sounds/09ferret.mp3" />
 
                     <Button
                         android:onClick="playSound"
                         android:background="@null"
-                        android:tag="People/job/works/sounds/16electrician.mp3"
+                        android:tag="People/job/workers/sounds/16electrician.mp3"
                         android:id="@+id/electrician"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -4319,6 +4409,17 @@
                         android:layout_toRightOf="@+id/dont_know"
                         android:layout_toEndOf="@+id/dont_know"
                         android:layout_width="80dp" />
+
+                    <Button
+                        android:onClick="playSound"
+                        android:tag="Outdoors/beach/creatures/sounds/05seagulls.mp3"
+                        android:background="@null"
+                        android:id="@+id/seagulls10"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/german_shepherd"
+                        android:layout_alignRight="@+id/electrician"
+                        android:layout_alignEnd="@+id/electrician" />
 
               </RelativeLayout>
 
@@ -5083,9 +5184,10 @@
                         android:id="@+id/store_hats"
                         android:layout_width="70dp"
                         android:layout_height="60dp"
-                        android:layout_alignBottom="@+id/store_hairsalon"
-                        android:layout_toRightOf="@+id/sombrero"
-                        android:layout_toEndOf="@+id/sombrero" />
+                        android:layout_alignBaseline="@+id/coonskin_cap"
+                        android:layout_alignBottom="@+id/coonskin_cap"
+                        android:layout_toRightOf="@+id/cowboy_hat"
+                        android:layout_toEndOf="@+id/cowboy_hat" />
 
                     <Button
                         android:onClick="playSound"
@@ -5234,7 +5336,7 @@
 
                     <Button
                         android:onClick="playSound"
-                        android:tag="xtra/22_jump_out_if_you_can.mp3"
+                        android:tag="xtra/hes_my_best_friend.mp3"
                         android:background="@null"
                         android:id="@+id/zebra"
                         android:layout_height="40dp"
@@ -5889,6 +5991,18 @@
                         android:layout_toRightOf="@+id/boy_lounging"
                         android:layout_toEndOf="@+id/boy_lounging" />
 
+                    <Button
+                        android:onClick="playSound"
+                        android:tag="xtra/stairway_to_boardwalk.mp3"
+                        android:background="@null"
+                        android:id="@+id/stairway1"
+                        android:layout_width="50dp"
+                        android:layout_alignBaseline="@+id/tardy_students1"
+                        android:layout_alignBottom="@+id/tardy_students1"
+                        android:layout_alignLeft="@+id/store_school"
+                        android:layout_alignStart="@+id/store_school"
+                        android:layout_height="30dp" />
+
 
               </RelativeLayout>
 
@@ -5914,7 +6028,7 @@
 
                     <Button
                         android:onClick="playSound"
-                        android:tag="xtra/walking_to_work.mp3"
+                        android:tag="xtra/hes_my_best_friend.mp3"
                         android:background="@null"
                         android:id="@+id/zebra1"
                         android:layout_alignBaseline="@+id/store_shoes"
@@ -6430,15 +6544,18 @@
                         android:layout_toEndOf="@+id/robot1" />
 
                     <Button
+                        android:id="@+id/store_nursery"
+                        android:layout_width="85dp"
+                        android:layout_height="60dp"
+                        android:layout_marginEnd="11dp"
+                        android:layout_marginRight="11dp"
+                        android:background="@null"
                         android:onClick="openInterior"
                         android:tag="plant"
-                        android:background="@null"
-                        android:id="@+id/store_nursery"
-                        android:layout_height="40dp"
-                        android:layout_above="@+id/business_woman"
-                        android:layout_toRightOf="@+id/alarm_clock"
-                        android:layout_toEndOf="@+id/alarm_clock"
-                        android:layout_width="85dp" />
+                        android:layout_alignBaseline="@+id/clock"
+                        android:layout_alignBottom="@+id/clock"
+                        android:layout_toLeftOf="@+id/woman_groceries"
+                        android:layout_toStartOf="@+id/woman_groceries" />
 
                     <Button
                         android:onClick="playSound"
@@ -7118,15 +7235,15 @@
                         android:layout_toStartOf="@+id/sign27" />
 
                     <Button
-                        android:onClick="playSound"
-                        android:tag="Outdoors/nursery/plants/sounds/07tree.mp3"
-                        android:background="@null"
                         android:id="@+id/tree2"
-                        android:layout_width="80dp"
-                        android:layout_below="@+id/stairway"
+                        android:layout_width="60dp"
+                        android:layout_height="120dp"
                         android:layout_alignLeft="@+id/grizzly_bear"
                         android:layout_alignStart="@+id/grizzly_bear"
-                        android:layout_height="120dp" />
+                        android:layout_below="@+id/stairway"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="Outdoors/nursery/plants/sounds/07tree.mp3" />
 
                     <Button
                         android:onClick="playSound"
@@ -7135,10 +7252,9 @@
                         android:id="@+id/rhino1"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_alignBaseline="@+id/waves"
-                        android:layout_alignBottom="@+id/waves"
-                        android:layout_alignRight="@+id/tree2"
-                        android:layout_alignEnd="@+id/tree2" />
+                        android:layout_alignTop="@+id/unicycle"
+                        android:layout_toRightOf="@+id/grizzly_bear"
+                        android:layout_toEndOf="@+id/grizzly_bear" />
 
 
               </RelativeLayout>
@@ -7166,12 +7282,12 @@
                         android:tag="xtra/27_its_nice_to_get_a_kiss.mp3"
                         android:background="@null"
                         android:id="@+id/giraffes"
-                        android:layout_width="40dp"
                         android:layout_height="60dp"
                         android:layout_alignTop="@+id/forest"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginTop="28dp" />
+                        android:layout_marginTop="28dp"
+                        android:layout_width="20dp" />
 
                     <Button
                         android:onClick="playSound"
@@ -7575,6 +7691,18 @@
                         android:layout_marginLeft="28dp"
                         android:layout_marginStart="28dp" />
 
+                    <Button
+                        android:onClick="playSound"
+                        android:tag="Animals/wild/sounds/26giraffe.mp3"
+                        android:background="@null"
+                        android:id="@+id/giraffes1"
+                        android:layout_height="60dp"
+                        android:layout_width="20dp"
+                        android:layout_alignBaseline="@+id/giraffes"
+                        android:layout_alignBottom="@+id/giraffes"
+                        android:layout_toRightOf="@+id/giraffes"
+                        android:layout_toEndOf="@+id/giraffes" />
+
               </RelativeLayout>
 
               <RelativeLayout
@@ -7663,11 +7791,12 @@
                         android:background="@null"
                         android:id="@+id/boys_beach_ball"
                         android:layout_width="20dp"
-                        android:layout_alignBaseline="@+id/sea_soam1"
-                        android:layout_alignBottom="@+id/sea_soam1"
+                        android:layout_height="40dp"
+                        android:layout_alignTop="@+id/beach2"
                         android:layout_toRightOf="@+id/beach2"
                         android:layout_toEndOf="@+id/beach2"
-                        android:layout_height="40dp" />
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginStart="11dp" />
 
                     <Button
                         android:onClick="playSound"
@@ -7938,7 +8067,7 @@
 
                     <Button
                         android:onClick="playSound"
-                        android:tag="xtra/beach_sign.mp3"
+                        android:tag="xtra/33_she_loves_to_swing_on_her_swing.mp3"
                         android:background="@null"
                         android:id="@+id/girl_on_swing"
                         android:layout_width="80dp"
@@ -7992,6 +8121,17 @@
                         android:layout_alignBottom="@+id/beach_sign"
                         android:layout_toRightOf="@+id/third_walker1"
                         android:layout_toEndOf="@+id/third_walker1" />
+
+                    <Button
+                        android:onClick="playSound"
+                        android:tag="xtra/sunbather.mp3"
+                        android:id="@+id/sunbathera"
+                        android:background="@null"
+                        android:layout_height="30dp"
+                        android:layout_width="30dp"
+                        android:layout_above="@+id/water"
+                        android:layout_alignRight="@+id/sign33"
+                        android:layout_alignEnd="@+id/sign33" />
 
 
               </RelativeLayout>

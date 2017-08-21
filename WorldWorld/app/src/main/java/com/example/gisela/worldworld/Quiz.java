@@ -40,7 +40,7 @@ public class Quiz extends AppCompatActivity {
     private Random num = new Random();
     private MediaPlayer play;
 
-    private TextView mScoreView;
+    private TextView mquestionText;
     private ImageView mImageChoice1;
     private ImageView mImageChoice2;
     private ImageView mImageChoice3;
@@ -89,10 +89,16 @@ public class Quiz extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         cat = b.getString("cat");
 
+        if(cat.contains("addition"))
+        {
+            cat = "School/addition/addition_quiz";
+        }
+
         mImageChoice1 = (ImageView) findViewById(R.id.choice1);
         mImageChoice2 = (ImageView) findViewById(R.id.choice2);
         mImageChoice3 = (ImageView) findViewById(R.id.choice3);
         mImageChoice4 = (ImageView) findViewById(R.id.choice4);
+        mquestionText = (TextView) findViewById(R.id.question);
 
         mCoin1 = (ImageView) findViewById(R.id.coin1);
         mCoin2 = (ImageView) findViewById(R.id.coin2);
@@ -135,6 +141,7 @@ public class Quiz extends AppCompatActivity {
         mImageChoice2.setImageDrawable(mQuestionLibrary.getChoice2());
         mImageChoice3.setImageDrawable(mQuestionLibrary.getChoice3());
         mImageChoice4.setImageDrawable(mQuestionLibrary.getChoice4());
+        mquestionText.setText(mQuestionLibrary.getQuestionText());
 
         mAnswer = mQuestionLibrary.getAnswer();
     }
@@ -193,6 +200,7 @@ public class Quiz extends AppCompatActivity {
         mImageChoice2.setImageDrawable(mQuestionLibrary.getChoice2());
         mImageChoice3.setImageDrawable(mQuestionLibrary.getChoice3());
         mImageChoice4.setImageDrawable(mQuestionLibrary.getChoice4());
+        mquestionText.setText(mQuestionLibrary.getQuestionText());
 
         mAnswer = mQuestionLibrary.getAnswer();
     }
@@ -245,6 +253,7 @@ public class Quiz extends AppCompatActivity {
         Drawable image2;
         Drawable image3;
         Drawable image4;
+        String questionText;
         Drawable correctImage;
         int n; //random number
         String correctAnswer;
@@ -273,6 +282,10 @@ public class Quiz extends AppCompatActivity {
             // get an InputStream to the asset representing the next item
             //provide access to the file
             openassets = getAssets().openFd(cat + "/sounds/" + soundpath1.get(0));
+
+            //Parse Question
+            questionText = ParseQuestionText(soundpath1.get(0));
+
             correctAnswer = soundpath1.get(0).replace("mp3", "png");
             soundpath1.remove(0);
 
@@ -320,7 +333,7 @@ public class Quiz extends AppCompatActivity {
                 }
             }
 
-            mQuestionLibrary = new QuestionLibrary(mSoundQuestion, image1, image2, image3, image4, correctImage);
+            mQuestionLibrary = new QuestionLibrary(mSoundQuestion, questionText, image1, image2, image3, image4, correctImage);
             data.add(mQuestionLibrary);
 
 
@@ -473,6 +486,26 @@ public class Quiz extends AppCompatActivity {
             startCongratulations();
             end = true;
         }
+
+    }
+
+    public String ParseQuestionText(String correctAnswerText)
+    {
+        correctAnswerText = correctAnswerText.replace(".mp3","");
+
+        if(!cat.contains("addition"))
+        {
+            correctAnswerText = correctAnswerText.replaceAll("\\d","");
+            correctAnswerText = correctAnswerText.replace("_"," ");
+            correctAnswerText = correctAnswerText.replace("}", "?");
+        }
+        else
+        {
+            String[] addition = correctAnswerText.split("_");
+            correctAnswerText = addition[addition.length-1];
+        }
+
+        return correctAnswerText;
 
     }
 

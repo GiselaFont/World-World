@@ -2,6 +2,7 @@ package com.example.gisela.worldworld;
 
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
+import android.widget.TextView;
 
 /**
  * Created by Gisela on 1/19/17.
@@ -9,14 +10,16 @@ import android.media.MediaPlayer;
 
 public class QuestionLibrary {
     private MediaPlayer question;
+    private String questionText;
     private Drawable choice1;
     private Drawable choice2;
     private Drawable choice3;
     private Drawable choice4;
     private Drawable answer;
 
-    public QuestionLibrary(MediaPlayer question, Drawable choice1, Drawable choice2, Drawable choice3, Drawable choice4, Drawable answer){
+    public QuestionLibrary(MediaPlayer question, String questionText, Drawable choice1, Drawable choice2, Drawable choice3, Drawable choice4, Drawable answer){
         this.question = question;
+        this.questionText = questionText;
         this.choice1 = choice1;
         this.choice2 = choice2;
         this.choice3 = choice3;
@@ -27,6 +30,8 @@ public class QuestionLibrary {
     public MediaPlayer getQuestion() {
          return question;
      }
+
+    public String getQuestionText() { return questionText; }
 
     public Drawable getChoice1(){
         return choice1;

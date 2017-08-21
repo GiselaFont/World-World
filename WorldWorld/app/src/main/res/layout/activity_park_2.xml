@@ -4,7 +4,7 @@
     android:id="@+id/activity_park_2"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.example.gisela.worldworld.Interior">
+    tools:context="com.example.gisela.worldworld.MainActivity">
 
     <HorizontalScrollView
         android:layout_width="wrap_content"
@@ -335,6 +335,18 @@
 
                 <Button
                     android:id="@+id/path2"
+                    android:background="@null"
+                    android:onClick="playSound"
+                    android:tag="Outdoors/places/sounds/07path.mp3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBaseline="@+id/rabbita"
+                    android:layout_alignBottom="@+id/rabbita"
+                    android:layout_toLeftOf="@+id/boy_on_stick"
+                    android:layout_toStartOf="@+id/boy_on_stick" />
+
+                <Button
+                    android:id="@+id/baseball"
                     android:background="@null"
                     android:onClick="playSound"
                     android:tag="Outdoors/places/sounds/07path.mp3"

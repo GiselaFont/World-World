@@ -86,16 +86,15 @@
             android:layout_alignStart="@+id/foot" />
 
         <Button
-            android:onClick="openCategory"
-            android:background="@null"
-            android:tag="@string/pediatrician_midbody"
             android:id="@+id/midbody"
             android:layout_width="70dp"
-            android:layout_height="120dp"
-            android:layout_above="@+id/foot"
-            android:layout_toRightOf="@+id/hand1"
+            android:layout_height="60dp"
+            android:layout_above="@+id/hand1"
             android:layout_toEndOf="@+id/hand1"
-            android:layout_marginBottom="16dp" />
+            android:layout_toRightOf="@+id/hand1"
+            android:background="@null"
+            android:onClick="openCategory"
+            android:tag="@string/pediatrician_midbody" />
 
         <Button
             android:onClick="openCategory"
@@ -123,6 +122,17 @@
             android:layout_marginStart="52dp"
             android:layout_marginTop="12dp"
             android:layout_height="100dp" />
+
+        <Button
+            android:id="@+id/legs"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:onClick="openCategory"
+            android:tag="@string/pediatrician_legs"
+            android:layout_below="@+id/midbody"
+            android:layout_toRightOf="@+id/hand1"
+            android:layout_toEndOf="@+id/hand1" />
 
 
     </RelativeLayout>
