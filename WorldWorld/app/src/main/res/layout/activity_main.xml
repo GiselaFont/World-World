@@ -1371,6 +1371,17 @@
                         android:onClick="playSound"
                         android:tag="xtra/04_he_said_he_saw_a_centaurette.mp3" />
 
+                    <Button
+                        android:id="@+id/bed"
+                        android:layout_width="20dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/ducksb"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="xtra/01bed.mp3" />
+
               </RelativeLayout>
 
               <RelativeLayout
@@ -3712,7 +3723,7 @@
                         android:id="@+id/boy_skateboard1"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="People/people/boys/03boy_on_a_skateboard.mp3"
+                        android:tag="xtra/boy_with_a_cast_on_a_skateboard.mp3"
                         android:layout_width="30dp"
                         android:layout_height="100dp"
                         android:layout_alignBottom="@+id/girl_rollerskating"
@@ -6612,7 +6623,7 @@
 
                     <Button
                         android:onClick="playSound"
-                        android:tag="xtra/pediatrician_doctor.mp3"
+                        android:tag="xtra/pediatrician_doctor_and_child_patient.mp3"
                         android:background="@null"
                         android:id="@+id/pediatrician"
                         android:layout_marginLeft="38dp"
@@ -6626,7 +6637,7 @@
 
                     <Button
                         android:onClick="playSound"
-                        android:tag="xtra/child_patient.mp3"
+                        android:tag="xtra/nurse_and_child_patient.mp3"
                         android:background="@null"
                         android:id="@+id/child_patient"
                         android:layout_height="35dp"
@@ -8151,6 +8162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="@string/app_name"
+                android:id="@+id/BrainyWords"
                 android:textSize="24sp"
                 android:textStyle="normal|bold" />
 

@@ -3,6 +3,7 @@ package com.example.gisela.worldworld;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.media.MediaPlayer;
@@ -93,12 +94,20 @@ public class Quiz extends AppCompatActivity {
         {
             cat = "School/addition/addition_quiz";
         }
+        else if(cat.contains("letters"))
+        {
+            cat = "School/letters/letters_quiz";
+        }
 
         mImageChoice1 = (ImageView) findViewById(R.id.choice1);
         mImageChoice2 = (ImageView) findViewById(R.id.choice2);
         mImageChoice3 = (ImageView) findViewById(R.id.choice3);
         mImageChoice4 = (ImageView) findViewById(R.id.choice4);
         mquestionText = (TextView) findViewById(R.id.question);
+
+        //set font ComicSans
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "Fonts/ComicSans.ttf");
+        mquestionText.setTypeface(custom_font);
 
         mCoin1 = (ImageView) findViewById(R.id.coin1);
         mCoin2 = (ImageView) findViewById(R.id.coin2);

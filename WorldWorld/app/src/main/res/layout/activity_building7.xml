@@ -172,7 +172,7 @@
                     android:id="@+id/woman_arms_crossed"
                     android:background="@null"
                     android:onClick="playSound"
-                    android:tag="xtra/26_i_dont_have_anything_to_do.mp3"
+                    android:tag="xtra/sister.mp3"
                     android:layout_width="35dp"
                     android:layout_height="200dp"
                     android:layout_marginLeft="12dp"

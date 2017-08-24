@@ -10,6 +10,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,7 +29,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -41,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     private MediaPlayer play;
     private HorizontalScrollView hsv;
+    private TextView mBrainyWords;
 
     //Zoom
     private float mScale = 1f;
@@ -56,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         hsv = (HorizontalScrollView) findViewById(R.id.horizontal_scroll);
+        mBrainyWords = (TextView) findViewById(R.id.BrainyWords);
+
+        //set font ComicSans
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "Fonts/ComicSans.ttf");
+        mBrainyWords.setTypeface(custom_font);
 
         play = new MediaPlayer();
         //Zoom

@@ -1,6 +1,7 @@
 package com.example.gisela.worldworld;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.provider.ContactsContract;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -70,6 +71,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         public MyViewHolder(View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.textView);
+
+            //set font ComicSans
+            Typeface custom_font = Typeface.createFromAsset(context.getAssets(),  "Fonts/ComicSans.ttf");
+            title.setTypeface(custom_font);
+
             icon = (ImageView) itemView.findViewById(R.id.dogs);
             icon.setOnClickListener(this);
         }

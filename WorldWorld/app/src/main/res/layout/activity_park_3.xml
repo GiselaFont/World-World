@@ -229,7 +229,7 @@
         android:id="@+id/monkey_bars"
         android:background="@null"
         android:onClick="playSound"
-        android:tag="Outdoors/park/equipment/sounds/03monkey_bars.mp3"
+        android:tag="xtra/06parallel_bars.mp3"
                     android:layout_width="35dp"
         android:layout_height="35dp"
                     android:layout_alignBottom="@+id/dragonfly"
