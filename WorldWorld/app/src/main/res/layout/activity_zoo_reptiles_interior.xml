@@ -90,7 +90,7 @@
         <Button
             android:onClick="playSound"
             android:background="@null"
-            android:tag="Animals/zoo/voices/iguana_lizard.mp3"
+            android:tag="Animals/zoo/voices/iguana.mp3"
             android:id="@+id/iguana"
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/turtle"
@@ -186,8 +186,8 @@
 
         <Button
             android:onClick="playSound"
-            android:background="#ffda81"
-            android:text="3"
+            android:background="#f7fdc3"
+            android:text="1"
             android:textColor="#000"
             android:tag="Animals/zoo/facts/sounds/iguana_3.mp3"
             android:id="@+id/iguana_3"
@@ -200,8 +200,8 @@
 
         <Button
             android:onClick="playSound"
-            android:background="#f7fdc3"
-            android:text="1"
+            android:background="#ffda81"
+            android:text="3"
             android:textColor="#000"
             android:tag="Animals/zoo/facts/sounds/iguana_1.mp3"
             android:id="@+id/iguana_1"
@@ -216,8 +216,8 @@
 
         <Button
             android:onClick="playSound"
-            android:background="#f7fdc3"
-            android:text="1"
+            android:background="#ffda81"
+            android:text="3"
             android:textColor="#000"
             android:tag="Animals/zoo/facts/sounds/turtle_1.mp3"
             android:id="@+id/turtle_1"
@@ -242,8 +242,8 @@
 
         <Button
             android:onClick="playSound"
-            android:background="#ffda81"
-            android:text="3"
+            android:background="#f7fdc3"
+            android:text="1"
             android:textColor="#000"
             android:tag="Animals/zoo/facts/sounds/turtle_3.mp3"
             android:id="@+id/turtle_3"

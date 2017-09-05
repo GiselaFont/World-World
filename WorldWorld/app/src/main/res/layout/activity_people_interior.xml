@@ -61,7 +61,7 @@
     <Button
         android:onClick="openCategory"
         android:background="@null"
-        android:tag="@string/special"
+        android:tag="@string/people_girls"
         android:id="@+id/groceries_cat3"
         android:layout_height="170dp"
         android:layout_width="190dp"
@@ -72,7 +72,7 @@
     <Button
         android:onClick="openCategory"
         android:background="@null"
-        android:tag="@string/people_girls"
+        android:tag="@string/special"
         android:id="@+id/groceries_cat5"
         android:layout_height="170dp"
         android:layout_width="190dp"

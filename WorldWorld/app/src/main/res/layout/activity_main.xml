@@ -199,13 +199,13 @@
                         android:id="@+id/sled"
                         android:layout_width="45dp"
                         android:layout_height="40dp"
-                        android:layout_alignBaseline="@+id/dachshund"
-                        android:layout_alignBottom="@+id/dachshund"
-                        android:layout_toEndOf="@+id/jack_in_the_box"
-                        android:layout_toRightOf="@+id/jack_in_the_box"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Mall/toys/riding/sounds/07sled.mp3" />
+                        android:tag="Mall/toys/riding/sounds/07sled.mp3"
+                        android:layout_alignBaseline="@+id/dachshund"
+                        android:layout_alignBottom="@+id/dachshund"
+                        android:layout_toRightOf="@+id/jack_in_the_box1"
+                        android:layout_toEndOf="@+id/jack_in_the_box1" />
 
 
                     <Button
@@ -279,14 +279,14 @@
 
                     <Button
                         android:id="@+id/cake"
-                        android:layout_width="30dp"
+                        android:layout_width="40dp"
                         android:layout_height="30dp"
-                        android:layout_alignTop="@+id/wagon"
-                        android:layout_toEndOf="@+id/bunny"
-                        android:layout_toRightOf="@+id/bunny"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Grocery/bakery/sweets/sounds/01cake.mp3" />
+                        android:tag="Grocery/bakery/sweets/sounds/01cake.mp3"
+                        android:layout_below="@+id/macaw_parrota"
+                        android:layout_toRightOf="@+id/citybusa"
+                        android:layout_toEndOf="@+id/citybusa" />
 
                     <Button
                         android:id="@+id/bunny_mask"
@@ -354,7 +354,7 @@
                         android:layout_height="70dp"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="xtra/chimp_1.mp3"
+                        android:tag="Animals/zoo/facts/sounds/chimp_3.mp3"
                         android:layout_below="@+id/pizza_car"
                         android:layout_alignLeft="@+id/jack_in_the_box"
                         android:layout_alignStart="@+id/jack_in_the_box" />
@@ -367,8 +367,8 @@
                         android:onClick="playSound"
                         android:tag="xtra/trash_can_4x.mp3"
                         android:layout_below="@+id/pizza_car"
-                        android:layout_toRightOf="@+id/jack_in_the_box"
-                        android:layout_toEndOf="@+id/jack_in_the_box" />
+                        android:layout_toRightOf="@+id/chipanzee"
+                        android:layout_toEndOf="@+id/chipanzee" />
 
                     <Button
                         android:id="@+id/flatbed_trucka"
@@ -753,13 +753,13 @@
                     <Button
                         android:id="@+id/bucketb"
                         android:layout_width="20dp"
-                        android:layout_height="25dp"
+                        android:layout_height="35dp"
                         android:background="@null"
                         android:onClick="playSound"
                         android:tag="House/housewares/sounds/10bucket.mp3"
-                        android:layout_below="@+id/carpenter_chiseling"
-                        android:layout_toRightOf="@+id/woman_watching1"
-                        android:layout_toEndOf="@+id/woman_watching1" />
+                        android:layout_above="@+id/motorcycleb"
+                        android:layout_toLeftOf="@+id/carpenter_chiseling"
+                        android:layout_toStartOf="@+id/carpenter_chiseling" />
 
                     <Button
                         android:id="@+id/laborer_shoveling"
@@ -916,6 +916,28 @@
                         android:layout_toLeftOf="@+id/dump_truck"
                         android:layout_toStartOf="@+id/dump_truck" />
 
+                    <Button
+                        android:id="@+id/carpenter_chiseling1"
+                        android:layout_width="25dp"
+                        android:layout_height="75dp"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="xtra/zcarpenter_sawing.mp3"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/sign4"
+                        android:layout_toEndOf="@+id/sign4" />
+
+                    <Button
+                        android:id="@+id/bed1"
+                        android:layout_width="25dp"
+                        android:layout_height="75dp"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="xtra/01bed.mp3"
+                        android:layout_alignTop="@+id/boxing_ballering"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
 
               </RelativeLayout>
 
@@ -971,7 +993,7 @@
                         android:layout_toRightOf="@+id/boxer1"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Vehicles/fun/sounds/02golf_cart.mp3" />
+                        android:tag="Vehicles/fun/sounds/02golfcart.mp3" />
 
                     <Button
                         android:id="@+id/ditch_shoveling"
@@ -1027,7 +1049,7 @@
                         android:layout_height="60dp"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Construction/sounds/12broken_pipe_spraying_water.mp3"
+                        android:tag="Construction/sounds/12broken_pipes_spraying_water.mp3"
                         android:layout_alignBaseline="@+id/ducksb"
                         android:layout_alignBottom="@+id/ducksb"
                         android:layout_toRightOf="@+id/ducksb"
@@ -1372,15 +1394,15 @@
                         android:tag="xtra/04_he_said_he_saw_a_centaurette.mp3" />
 
                     <Button
-                        android:id="@+id/bed"
-                        android:layout_width="20dp"
-                        android:layout_height="70dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_below="@+id/ducksb"
+                        android:id="@+id/plumber3"
+                        android:layout_width="27dp"
+                        android:layout_height="65dp"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="xtra/01bed.mp3" />
+                        android:tag="Construction/sounds/08plumber.mp3"
+                        android:layout_alignTop="@+id/fireplug"
+                        android:layout_alignLeft="@+id/bucket2"
+                        android:layout_alignStart="@+id/bucket2" />
 
               </RelativeLayout>
 
@@ -2396,6 +2418,19 @@
                         android:layout_toLeftOf="@+id/SUV"
                         android:layout_toStartOf="@+id/SUV" />
 
+                    <Button
+                        android:id="@+id/little_boy_tractor"
+                        android:layout_width="40dp"
+                        android:layout_height="60dp"
+                        android:background="@null"
+                        android:onClick="playSound"
+                        android:tag="xtra/08_the_little_boy_said_he_wanted_to_ride_the_tractor.mp3"
+                        android:layout_alignBottom="@+id/roster"
+                        android:layout_alignLeft="@+id/farm_tractor1"
+                        android:layout_alignStart="@+id/farm_tractor1"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginStart="11dp" />
+
 
               </RelativeLayout>
 
@@ -2810,7 +2845,7 @@
                         android:layout_alignRight="@+id/pursee"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Vehicles/fun/sounds/02golf_cart.mp3" />
+                        android:tag="Vehicles/fun/sounds/02golfcart.mp3" />
 
                     <Button
                         android:id="@+id/cocker_spaniel"
@@ -3112,7 +3147,7 @@
                         android:layout_alignParentStart="true"
                         android:background="@null"
                         android:onClick="playSound"
-                        android:tag="Outdoors/park/equipment/sounds/09picnic_table.mp3" />
+                        android:tag="Outdoors/park/equipment/sounds/10picnic_table.mp3" />
 
                     <Button
                         android:id="@+id/astronaut_with_baby"
@@ -4136,15 +4171,15 @@
                         android:layout_centerHorizontal="true" />
 
                     <Button
+                        android:id="@+id/store_grocery"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:background="@null"
                         android:onClick="openInterior"
                         android:tag="groceries"
-                        android:background="@null"
-                        android:id="@+id/store_grocery"
-                        android:layout_height="70dp"
-                        android:layout_width="70dp"
-                        android:layout_above="@+id/wafras"
-                        android:layout_alignLeft="@+id/german_shepherd"
-                        android:layout_alignStart="@+id/german_shepherd" />
+                        android:layout_above="@+id/german_shepherd"
+                        android:layout_alignRight="@+id/car_wrecked"
+                        android:layout_alignEnd="@+id/car_wrecked" />
 
                     <Button
                         android:onClick="openInterior"
@@ -4591,7 +4626,7 @@
 
                     <Button
                         android:onClick="playSound"
-                        android:tag="Vehicles/fun/sounds/02golf_cart.mp3"
+                        android:tag="Vehicles/fun/sounds/02golfcart.mp3"
                         android:background="@null"
                         android:id="@+id/golf_cart"
                         android:layout_alignBottom="@+id/dune_buggy"
@@ -5300,6 +5335,17 @@
                         android:layout_alignStart="@+id/farm_tractor"
                         android:layout_width="100dp" />
 
+                    <Button
+                        android:onClick="playSound"
+                        android:tag="xtra/dirt.mp3"
+                        android:background="@null"
+                        android:id="@+id/construction1"
+                        android:layout_height="50dp"
+                        android:layout_width="80dp"
+                        android:layout_alignTop="@+id/bucket"
+                        android:layout_toRightOf="@+id/rooster"
+                        android:layout_toEndOf="@+id/rooster" />
+
               </RelativeLayout>
 
               <RelativeLayout
@@ -5469,7 +5515,7 @@
 
                     <Button
                         android:onClick="playSound"
-                        android:tag="xtra/HEADINGS/00alphabet_letters.mp3"
+                        android:tag="xtra/HEADINGS/00letters.mp3"
                         android:background="@null"
                         android:id="@+id/letters"
                         android:layout_alignBaseline="@+id/zebra"
@@ -5481,7 +5527,7 @@
 
                     <Button
                         android:onClick="playSound"
-                        android:tag="Outdoors/park/equipment/sounds/10flag_and_pole.mp3"
+                        android:tag="Outdoors/park/equipment/sounds/11flag_and_pole.mp3"
                         android:background="@null"
                         android:id="@+id/flag_and_pole"
                         android:layout_width="50dp"
@@ -6004,7 +6050,7 @@
 
                     <Button
                         android:onClick="playSound"
-                        android:tag="xtra/stairway_to_boardwalk.mp3"
+                        android:tag="xtra/12_stairs.mp3"
                         android:background="@null"
                         android:id="@+id/stairway1"
                         android:layout_width="50dp"
@@ -7749,7 +7795,7 @@
 
                     <Button
                         android:onClick="playSound"
-                        android:tag="xtra/04_he_said_he_saw_a_centaurette.mp3"
+                        android:tag="Animals/pretend/sounds/01centaurette_.mp3"
                         android:background="@null"
                         android:id="@+id/centaurette"
                         android:layout_width="30dp"

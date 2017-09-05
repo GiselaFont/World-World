@@ -102,17 +102,16 @@
                     android:layout_alignStart="@+id/skunt" />
 
                 <Button
-        android:id="@+id/turtle1"
-        android:background="@null"
-        android:onClick="playSound"
-        android:tag="Outdoors/park/creatures/sounds/12tortoise.mp3"
-                    android:layout_width="40dp"
-        android:layout_height="40dp"
+                    android:id="@+id/turtle1"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:onClick="playSound"
+                    android:tag="Outdoors/park/creatures/sounds/12tortoise.mp3"
                     android:layout_below="@+id/squirreld"
-                    android:layout_alignLeft="@+id/woman_holding_nosed"
-                    android:layout_alignStart="@+id/woman_holding_nosed"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginStart="35dp" />
+                    android:layout_toRightOf="@+id/dandelion5"
+                    android:layout_toEndOf="@+id/dandelion5"
+                    android:layout_marginTop="12dp" />
 
                 <Button
         android:id="@+id/possum"
@@ -132,9 +131,9 @@
         android:tag="Outdoors/park/creatures/sounds/01squirrel.mp3"
                     android:layout_width="40dp"
         android:layout_height="30dp"
-                    android:layout_alignBottom="@+id/girl_skating"
-                    android:layout_toLeftOf="@+id/loitering_man"
-                    android:layout_toStartOf="@+id/loitering_man" />
+                    android:layout_above="@+id/sleepy_dog2"
+                    android:layout_toRightOf="@+id/turtle1"
+                    android:layout_toEndOf="@+id/turtle1" />
 
                 <Button
         android:id="@+id/iguana1d"
@@ -166,9 +165,11 @@
         android:tag="xtra/loitering_man.mp3"
                     android:layout_width="40dp"
         android:layout_height="120dp"
+                    android:layout_marginLeft="49dp"
+                    android:layout_marginStart="49dp"
                     android:layout_alignBottom="@+id/sleepy_dog2"
-                    android:layout_toRightOf="@+id/possum"
-                    android:layout_toEndOf="@+id/possum" />
+                    android:layout_toRightOf="@+id/turtle1"
+                    android:layout_toEndOf="@+id/turtle1" />
 
                 <Button
         android:id="@+id/snaild"
@@ -177,9 +178,9 @@
         android:tag="Outdoors/beach/creatures/sounds/10snail.mp3"
                     android:layout_width="70dp"
         android:layout_height="50dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignLeft="@+id/lady_strollerz"
-                    android:layout_alignStart="@+id/lady_strollerz" />
+                    android:layout_below="@+id/path2"
+                    android:layout_toLeftOf="@+id/path2"
+                    android:layout_toStartOf="@+id/path2" />
 
                 <Button
         android:id="@+id/boy_on_stick"

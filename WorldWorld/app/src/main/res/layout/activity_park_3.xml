@@ -60,7 +60,7 @@
         android:id="@+id/picnic_tablee"
         android:background="@null"
         android:onClick="playSound"
-        android:tag="Outdoors/park/equipment/sounds/09picnic_table.mp3"
+        android:tag="Outdoors/park/equipment/sounds/10picnic_table.mp3"
         android:layout_width="50dp"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
@@ -157,7 +157,7 @@
                     android:id="@+id/house"
                     android:background="@null"
                     android:onClick="playSound"
-                    android:tag="Interiors/sounds/12house.mp3"
+                    android:tag="xtra/HEADINGS/00house.mp3"
                     android:layout_height="30dp"
                     android:layout_width="55dp"
                     android:layout_above="@+id/clown_balloons1d"
@@ -487,6 +487,28 @@
                     android:layout_below="@+id/path3"
                     android:layout_toRightOf="@+id/benchd"
                     android:layout_toEndOf="@+id/benchd" />
+
+                <Button
+                    android:id="@+id/father"
+                    android:background="@null"
+                    android:onClick="playSound"
+                    android:tag="People/people/family/sounds/03father.mp3"
+                    android:layout_width="40dp"
+                    android:layout_height="100dp"
+                    android:layout_alignTop="@+id/benchd"
+                    android:layout_toRightOf="@+id/girl_cartwheel3"
+                    android:layout_toEndOf="@+id/girl_cartwheel3" />
+
+                <Button
+                    android:id="@+id/daughter"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_above="@+id/swings"
+                    android:layout_toEndOf="@+id/swings1"
+                    android:layout_toRightOf="@+id/swings1"
+                    android:background="@null"
+                    android:onClick="playSound"
+                    android:tag="People/people/family/sounds/05daughter.mp3" />
 
 
             </RelativeLayout>
