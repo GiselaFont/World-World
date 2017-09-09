@@ -6608,7 +6608,7 @@
                         android:layout_marginRight="11dp"
                         android:background="@null"
                         android:onClick="openInterior"
-                        android:tag="plant"
+                        android:tag="nursery"
                         android:layout_alignBaseline="@+id/clock"
                         android:layout_alignBottom="@+id/clock"
                         android:layout_toLeftOf="@+id/woman_groceries"

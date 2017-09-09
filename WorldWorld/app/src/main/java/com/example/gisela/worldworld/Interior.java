@@ -101,7 +101,7 @@ public class Interior extends AppCompatActivity {
                 setContentView(R.layout.activity_zoo_interior);
             }
         }
-        else if(cat.contains("plant"))
+        else if(cat.contains("nursery"))
         {
             setContentView(R.layout.activity_plant_interior);
         }
@@ -206,7 +206,7 @@ public class Interior extends AppCompatActivity {
     public void openInterior(View view)
     {
         String tag = view.getTag().toString();
-        playCategorySound(cat);
+        playCategorySound(tag);
         Intent interiorActivity = new Intent(this, Interior.class);
         Bundle b = new Bundle();
         b.putString("cat",tag);
@@ -234,7 +234,6 @@ public class Interior extends AppCompatActivity {
         b.putString("cat", tag);
         quizActivity.putExtras(b);
         startActivity(quizActivity);
-
     }
 
     public String Parse(String tag)
@@ -264,6 +263,38 @@ public class Interior extends AppCompatActivity {
     public void playCategorySound(String cat)
     {
         AssetFileDescriptor openassets;
+
+        if(cat.contains("zoo"))
+        {
+            if(cat.contains("water"))
+            {
+                cat = "aquatic_water_animals";
+            }
+            else if(cat.contains("dino"))
+            {
+                cat = "dinosaurs";
+            }
+            else if(cat.contains("meat"))
+            {
+                cat = "carnivore_meat_eaters";
+            }
+            else if(cat.contains("reptiles"))
+            {
+                cat = "reptiles";
+            }
+            else if(cat.contains("plant"))
+            {
+                cat = "herbivore_plant_eaters";
+            }
+            else if(cat.contains("monkeys"))
+            {
+                cat = "monkeys_and_apes";
+            }
+            else if(cat.contains("birds"))
+            {
+                cat = "birds_for_zoo_only";
+            }
+        }
 
         if(!play.isPlaying())
         {

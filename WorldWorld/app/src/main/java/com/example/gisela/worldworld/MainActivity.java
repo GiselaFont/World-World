@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
 
     public String Parse(String tag)
     {
-        if(!tag.equals("Construction"))
+        if(!tag.equals("Construction") && !tag.equals("Outdoors/beach/creatures"))
         {
             String[] path = tag.split("/");
             tag = path[path.length-1];
@@ -212,6 +212,10 @@ public class MainActivity extends AppCompatActivity {
         if(cat.equals("clothes"))
         {
             cat = "Clothing";
+        }
+        else if(cat.equals("Outdoors/beach/creatures"))
+        {
+            cat = "beach_creatures";
         }
 
         if(!play.isPlaying())
