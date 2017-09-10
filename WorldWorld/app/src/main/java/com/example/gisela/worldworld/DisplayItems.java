@@ -191,4 +191,16 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
         finish();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (play != null){
+            play.stop();
+            if (isFinishing()){
+                play.stop();
+                play.release();
+            }
+        }
+    }
+
 }

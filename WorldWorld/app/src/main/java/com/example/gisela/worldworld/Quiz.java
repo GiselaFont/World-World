@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Range;
 import android.view.View;
+import android.view.ViewDebug;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -243,7 +244,7 @@ public class Quiz extends AppCompatActivity {
                 case 5: mCoin5.setVisibility(View.VISIBLE);
                     setBags();
                     mScore = 0;
-                    if(mBag4.getVisibility() != View.VISIBLE)
+                    if(mBag5.getVisibility() != View.VISIBLE)
                     {
                         bag = true;
                         startCelebration();
@@ -262,6 +263,10 @@ public class Quiz extends AppCompatActivity {
         Drawable image2;
         Drawable image3;
         Drawable image4;
+        String[] addition;
+        int q_num1 = 0;
+        int q_num2 = 0;
+        int ans = 0;
         String questionText;
         Drawable correctImage;
         int n; //random number
@@ -292,6 +297,18 @@ public class Quiz extends AppCompatActivity {
             //provide access to the file
             openassets = getAssets().openFd(cat + "/sounds/" + soundpath1.get(0));
 
+            //only for addition quiz to prevent duplicate answers
+            if(cat.contains("addition"))
+            {
+                addition = soundpath1.get(0).split("_");
+                if(addition.length < 3)
+                {
+                    addition = addition[1].split("");
+                    q_num1 = Integer.parseInt(addition[1]);
+                    q_num2 = Integer.parseInt(addition[3]);
+                }
+            }
+
             //Parse Question
             questionText = ParseQuestionText(soundpath1.get(0));
 
@@ -307,20 +324,44 @@ public class Quiz extends AppCompatActivity {
             List<String> imagepath = new LinkedList<String>(Arrays.asList(assets.list(cat)));
 
             //get all possible answers
-            answers[0] = assets.open(cat + "/" + correctAnswer); //load asset
+            if(cat.contains("addition"))
+            {
+                ans = q_num1 + q_num2;
+                answers[0] = assets.open(cat + "/" + Integer.toString(ans) + ".png");
+                Log.d("add", Integer.toString(ans));
+                //remove correct answer from list to avoid duplicates
+                imagepath.remove(Integer.toString(ans) + ".png");
+            }
+            else{
+                answers[0] = assets.open(cat + "/" + correctAnswer); //load asset
+                //remove correct answer from list to avoid duplicates
+                imagepath.remove(correctAnswer);
+            }
+
             //store correct answer
             correctA = answers[0];
 
-            //remove correct answer from list to avoid duplicates
-            imagepath.remove(correctAnswer);
+
 
             //get other possible answers (wrong answers)
-            for(int i = 1; i < answers.length; i++)
+            if(!cat.contains("addition"))
             {
-                n = num.nextInt(imagepath.size()-1);
-                answers[i] = assets.open(cat + "/" + imagepath.get(n)); //load asset
-                imagepath.remove(n); //remove to avoid duplicates
+                for(int i = 1; i < answers.length; i++)
+                {
+                    n = num.nextInt(imagepath.size()-1);
+                    answers[i] = assets.open(cat + "/" + imagepath.get(n)); //load asset
+                    imagepath.remove(n); //remove to avoid duplicates
+                }
+            }
+            else{
 
+                for(int i = 1; i < answers.length; i++)
+                {
+                    n = num.nextInt(imagepath.size()-1);
+                    answers[i] = assets.open(cat + "/" + imagepath.get(n)); //load asset
+                    Log.d("add", "wrong: " + imagepath.get(n));
+                    imagepath.remove(n); //remove to avoid duplicates
+                }
             }
 
             //shuffle possible answers and assign them to the right drawable
@@ -534,6 +575,18 @@ public class Quiz extends AppCompatActivity {
     public void goBack (View view)
     {
         finish();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (play != null){
+            play.stop();
+            if (isFinishing()){
+                play.stop();
+                play.release();
+            }
+        }
     }
 
 }

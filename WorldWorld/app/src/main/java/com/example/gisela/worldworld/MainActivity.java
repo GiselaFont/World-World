@@ -168,12 +168,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void openStore(View view)
-    {
+    public void openStore(View view) throws InterruptedException {
         //get tag from xml layout
         String tag = view.getTag().toString();
         String cat = Parse(tag); //get cat
         playCategorySound(cat);
+        Thread.sleep(2000);
         Intent itemsActivity = new Intent(this, DisplayItems.class);
         Bundle b = new Bundle();
         b.putString("cat",tag);
@@ -181,10 +181,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(itemsActivity);
     }
 
-    public void openInterior(View view)
-    {
+    public void openInterior(View view) throws InterruptedException {
+
         String tag = view.getTag().toString();
         playCategorySound(tag);
+        Thread.sleep(2000);
         Intent interiorActivity = new Intent(this, Interior.class);
         Bundle b = new Bundle();
         b.putString("cat",tag);
@@ -242,6 +243,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (play != null){
+            play.stop();
+            if (isFinishing()){
+                play.stop();
+                play.release();
+            }
+        }
     }
 
 

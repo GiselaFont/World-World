@@ -161,11 +161,12 @@ public class Interior extends AppCompatActivity {
 
     }
 
-    public void openCategory(View view)
-    {
+    public void openCategory(View view) throws InterruptedException {
+
         String tag = view.getTag().toString();
         String cat = Parse(tag); //get cat
         playCategorySound(cat);
+        Thread.sleep(2000);
         Intent itemsActivity = new Intent(this, DisplayItems.class);
         Bundle b = new Bundle();
         b.putString("cat",tag);
@@ -203,10 +204,11 @@ public class Interior extends AppCompatActivity {
 
     }
 
-    public void openInterior(View view)
-    {
+    public void openInterior(View view) throws InterruptedException {
+
         String tag = view.getTag().toString();
         playCategorySound(tag);
+        Thread.sleep(2000);
         Intent interiorActivity = new Intent(this, Interior.class);
         Bundle b = new Bundle();
         b.putString("cat",tag);

@@ -107,6 +107,18 @@ public class QuizCelebrate extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (play != null){
+            play.stop();
+            if (isFinishing()){
+                play.stop();
+                play.release();
+            }
+        }
+    }
+
 
 
 }
