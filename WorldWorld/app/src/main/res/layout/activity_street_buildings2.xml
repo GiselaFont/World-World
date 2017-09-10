@@ -158,13 +158,13 @@
                     android:tag="xtra/dirt.mp3"
                     android:background="@null"
                     android:id="@+id/construction"
+                    android:layout_width="200dp"
                     android:layout_alignBottom="@+id/front_loader"
                     android:layout_toRightOf="@+id/front_loader"
                     android:layout_toEndOf="@+id/front_loader"
                     android:layout_marginLeft="11dp"
                     android:layout_marginStart="11dp"
-                    android:layout_height="50dp"
-                    android:layout_width="80dp" />
+                    android:layout_height="50dp" />
 
                 <Button
                     android:onClick="playSound"
@@ -503,7 +503,7 @@
 
                 <Button
                     android:onClick="playSound"
-                    android:tag="Construction/Sounds/14traffic_cones.mp3"
+                    android:tag="Construction/sounds/14traffic_cones.mp3"
                     android:background="@null"
                     android:id="@+id/traffic_cones"
                     android:layout_height="40dp"
@@ -514,7 +514,7 @@
 
                 <Button
                     android:onClick="playSound"
-                    android:tag="Construction/Sounds/14traffic_cones.mp3"
+                    android:tag="Construction/sounds/14traffic_cones.mp3"
                     android:background="@null"
                     android:id="@+id/traffic_cones1"
                     android:layout_height="40dp"
@@ -525,7 +525,7 @@
 
                 <Button
                     android:onClick="playSound"
-                    android:tag="Construction/Sounds/14traffic_cones.mp3"
+                    android:tag="Construction/sounds/14traffic_cones.mp3"
                     android:background="@null"
                     android:id="@+id/traffic_cones2"
                     android:layout_height="40dp"
@@ -563,10 +563,9 @@
                     android:id="@+id/store_hats"
                     android:layout_width="70dp"
                     android:layout_height="60dp"
-                    android:layout_alignBaseline="@+id/coonskin_cap"
-                    android:layout_alignBottom="@+id/coonskin_cap"
-                    android:layout_toRightOf="@+id/cowboy_hat"
-                    android:layout_toEndOf="@+id/cowboy_hat" />
+                    android:layout_alignBottom="@+id/store_hairsalon"
+                    android:layout_toRightOf="@+id/sombrero"
+                    android:layout_toEndOf="@+id/sombrero" />
 
                 <Button
                     android:onClick="playSound"
@@ -615,7 +614,7 @@
 
                 <Button
                     android:onClick="playSound"
-                    android:tag="Mall/hair_salon/boys/sounds/05Mohawk.mp3"
+                    android:tag="Mall/hair_salon/boys/sounds/05mohawk.mp3"
                     android:background="@null"
                     android:id="@+id/red"
                     android:layout_height="30dp"
@@ -656,28 +655,6 @@
                     android:layout_alignBottom="@+id/safety_googles"
                     android:layout_toRightOf="@+id/store_hairsalon"
                     android:layout_toEndOf="@+id/store_hairsalon" />
-
-                <Button
-                    android:onClick="playSound"
-                    android:tag="xtra/HEADINGS/00construction_site.mp3"
-                    android:background="@null"
-                    android:id="@+id/dirt"
-                    android:layout_height="50dp"
-                    android:layout_below="@+id/traffic_cones2"
-                    android:layout_alignLeft="@+id/farm_tractor"
-                    android:layout_alignStart="@+id/farm_tractor"
-                    android:layout_width="100dp" />
-
-                <Button
-                    android:onClick="playSound"
-                    android:tag="xtra/dirt.mp3"
-                    android:background="@null"
-                    android:id="@+id/construction1"
-                    android:layout_height="50dp"
-                    android:layout_width="80dp"
-                    android:layout_alignTop="@+id/bucket"
-                    android:layout_toRightOf="@+id/rooster"
-                    android:layout_toEndOf="@+id/rooster" />
 
             </RelativeLayout>
 
