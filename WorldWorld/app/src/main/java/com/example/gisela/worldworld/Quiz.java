@@ -129,6 +129,8 @@ public class Quiz extends AppCompatActivity {
         end = false;
 
         play = new MediaPlayer();
+        play.pause();
+
 
         updateFirstQuestion();
     }
@@ -587,6 +589,7 @@ public class Quiz extends AppCompatActivity {
                 play.release();
             }
         }
+        Runtime.getRuntime().gc();
     }
 
 }

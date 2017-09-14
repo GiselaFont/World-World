@@ -21,6 +21,7 @@ public class Interior extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         //get value of the tag (press button)
         Bundle b = getIntent().getExtras();
         if(b != null)
@@ -174,6 +175,7 @@ public class Interior extends AppCompatActivity {
         b.putString("cat",tag);
         itemsActivity.putExtras(b);
         startActivity(itemsActivity);
+        finish();
     }
 
     public void playSound(View view)
@@ -216,7 +218,7 @@ public class Interior extends AppCompatActivity {
         b.putString("cat",tag);
         interiorActivity.putExtras(b);
         startActivity(interiorActivity);
-        //finish();
+        finish();
     }
 
     public void goHome (View view)
@@ -238,6 +240,7 @@ public class Interior extends AppCompatActivity {
         b.putString("cat", tag);
         quizActivity.putExtras(b);
         startActivity(quizActivity);
+        finish();
     }
 
     public String Parse(String tag)
@@ -323,6 +326,25 @@ public class Interior extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (play != null){
+            play.stop();
+            if (isFinishing()){
+                play.stop();
+                play.release();
+            }
+        }
+        Runtime.getRuntime().gc();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 
 

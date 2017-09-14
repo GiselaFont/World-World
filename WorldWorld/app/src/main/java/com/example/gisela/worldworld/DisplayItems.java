@@ -201,6 +201,13 @@ public class DisplayItems extends AppCompatActivity implements MyAdapter.ClickLi
                 play.release();
             }
         }
+        Runtime.getRuntime().gc();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 
 }

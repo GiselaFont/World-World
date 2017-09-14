@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
 
         hsv = (HorizontalScrollView) findViewById(R.id.horizontal_scroll);
         mBrainyWords = (TextView) findViewById(R.id.BrainyWords);
@@ -255,6 +256,13 @@ public class MainActivity extends AppCompatActivity {
                 play.release();
             }
         }
+        Runtime.getRuntime().gc();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 
 
